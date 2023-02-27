@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khuyến mãi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS-File/promotion.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+        crossorigin="anonymous"></script>
+    <script src="../js/promotion.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-top">
+            <div class="row">
+                <div class="col-6 head-top-left">
+                    <ul>
+                        <li>
+                            <a href="main.html"><i class="bi bi-house-door-fill"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="bi bi-question-circle-fill"></i>Trợ giúp</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="bi bi-newspaper"></i>Tin tức</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="bi bi-gift"></i>Khuyến mại</a>
+                        </li>
+                        <li>
+                            <a><i class="bi bi-telephone-fill"></i>&ensp;Hot line:</a>
+                            <b>0123 456 789</b>
+                        </li>
+                        <li class="list-follow">
+                            <a href="#"><i class="bi bi-hand-thumbs-up"></i>Theo dõi 31</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 head-top-right">
+                    <ul>
+                        <li>
+                            <a href="#"><i class="bi bi-person-check"></i>Đăng ký</a>
+                        </li>
+                        <li>
+                            <a href="#"> <i class="bi bi-box-arrow-in-right"></i>Đăng nhập</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="bi bi-boxes"></i>Kiểm tra đơn hàng</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="header-logo col-2">
+                        <img src="../image/logo-new.png" alt="">
+                    </div>
+                    <div class="header__search col-6">
+                        <div class="input-group ">
+                            <button class="input-group-text sum">Tất cả</button>
+                            <input type="text" class="form-control" placeholder="Nhập từ khóa muốn tìm"
+                                aria-label="Dollar amount (with dot and two decimal places)">
+                            <button class="input-group-text search">Tìm</button>
+                        </div>
+                    </div>
+                    <div class="dropdown col-2">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="bi bi-question-circle-fill"></i>Ưu đãi & Tiện ích
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Đặt hàng theo yêu cầu</a></li>
+                            <li><a class="dropdown-item" href="#"> phí giao hàng</a></li>
+                            <li><a class="dropdown-item" href="#">Ưu đãi đặc biệt</a></li>
+                            <li><a class="dropdown-item" href="#">Mua hàng giá 0đ</a></li>
+                            <li><a class="dropdown-item" href="#">Đổi trả hàng</a></li>
+                        </ul>
+                    </div>
+                    <div class="header__shop col-2 "><i class="bi bi-cart"></i>Giỏ hàng (0)</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nav">
+        <div class="container">
+            <div class="menu">
+                <div class="menu-link">
+                    <i class="bi bi-list"></i>Danh mục sản phẩm<i class="bi bi-caret-down-fill"></i>
+                </div>
+                <ul class="nav-menu">
+                    <li class="menu-bottom"><a href="#" class="menu-bottom-link"> Truyện tranh hot</a></li>
+                    <li class="menu-bottom"><a href="#" class="menu-bottom-link">Truyện tranh đồng giá</a></li>
+                    <li class="menu-bottom">
+                        <a href="#" class="menu-bottom-link">Truyện tranh theo chủ đề</a>
+                        <ul class="menu-secondary">
+                            <li><a href="#">Chinh thám</a></li>
+                            <li><a href="#">Thám hiểm</a></li>
+                            <li><a href="#">Ma thuật</a></li>
+                            <li><a href="#">Đô thị</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-bottom">
+                        <a href="#" class="menu-bottom-link">Truyện tranh theo năm XB</a>
+                        <ul class="menu-secondary">
+                            <li><a href="#">Năm 2018</a></li>
+                            <li><a href="#">Năm 2019</a></li>
+                            <li><a href="#">Năm 2020</a></li>
+                            <li><a href="#">Năm 2021</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-bottom">
+                        <a href="#" class="menu-bottom-link">Thuyện tranh theo quốc gia</a>
+                        <ul class="menu-secondary">
+                            <li><a href="#">Việt Nam</a></li>
+                            <li><a href="#">Trung Quốc</a></li>
+                            <li><a href="#">Nhật bản</a></li>
+                            <li><a href="#">Mỹ</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-bottom">
+                        <a href="#" class="menu-bottom-link">Tác giả nổi tiếng</a>
+                        <ul class="menu-secondary">
+                            <li><a href="#">Eiichiro Oda</a></li>
+                            <li><a href="#">Eiichiro Oda</a></li>
+                            <li><a href="#">Fujiko Fujio</a></li>
+                            <li><a href="#">Masashi Kishimoto</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <hr style="margin-top: -1px;">
+    <div class="main">
+        <div class="container">
+            <h1>HOT NHẤT HÔM NAY</h1>
+            <div class="main-event-today">
+                <div class="event-img"><img src="../image/banner-khuyen-mai.jpeg" alt=""></div>
+                <h5>XPPEN CƠN LỐC SIÊU TỐC</h5>
+                <b>Từ: 01/10/2022</b>
+                <b>Đến: 25/10/2022</b>
+                <b id="time"><i class="bi bi-alarm"></i></b>
+                <br>
+                <b><i>Chi tiết chương trình</i></b>
+                <a href="#">XEM TẠI ĐÂY</a>
+            </div>
+            <h4>KHUYẾN MÃI HIỆN TẠI</h4>
+            <div class="main-event-now">
+                <div class="event-img">
+                    <img src="../image/banner-khuyen-mai.jpeg" alt="">
+                    <button><i class="bi bi-link-45deg"></i>XEM NGAY</button>
+                </div>
+                <h5>XPPEN CƠN LỐC SIÊU TỐC</h5>
+                <b>Từ: 01/10/2022</b>
+                <b>Đến: 25/10/2022</b>
+                <b id="times"><i class="bi bi-alarm"></i></b>
+                <br>
+                <b><i>Chi tiết chương trình</i></b>
+                <a href="#">XEM TẠI ĐÂY</a>
+            </div>
+            <h4>KHUYẾN MÃI HẾT HẠN</h4>
+            <div class="main-event-over">
+                <div class="row">
+                    <div class="col-6 over-left">
+                        <div class="event-content">
+                            <div class="event-img">
+                                <img src="../image/khuyen-mai-img.jpeg" alt="">
+                                <button><i class="bi bi-link-45deg"></i>XEM NGAY</button>
+                            </div>
+                            <h5>ƯU ĐẠI DÀNH CHO GIÁO VIÊN - HỌC SINH - SINH VIÊN</h5>
+                            <b>Từ: 27/11/2021</b>
+                            <b>Đến: 31/12/2021</b>
+                            <br>
+                            <b><i>Chi tiết chương trình</i></b>
+                            <a href="#">XEM TẠI ĐÂY</a>
+                        </div>
+                    </div>
+                    <div class="col-6 over-right">
+                        <div class="event-content">
+                            <div class="event-img">
+                                <img src="../image/khuyen-mai-10.jpeg" alt="">
+                                <button><i class="bi bi-link-45deg"></i>XEM NGAY</button></div>
+                            <h5>Rạp Hát Tại Gia</h5>
+                            <b>Từ: 23/11/2020</b>
+                            <b>Đến: 28/02/2021</b>
+                            <br>
+                            <b><i>Chi tiết chương trình</i></b>
+                            <a href="#">XEM TẠI ĐÂY</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 over-left">
+                        <div class="event-content">
+                            <div class="event-img">
+                                <img src="../image/khuyen-mai-img-3.jpeg" alt="">
+                                <button><i class="bi bi-link-45deg"></i>XEM NGAY</button>
+                            </div>
+                            <h5>XP-PEN GIẢM KHỦNG NHẤT NĂM!</h5>
+                            <b>Từ: 06/01/2020</b>
+                            <b>Đến:01/02/2020</b>
+                            <br>
+                            <b><i>Chi tiết chương trình</i></b>
+                            <a href="#">XEM TẠI ĐÂY</a>
+                        </div>
+                    </div>
+                    <div class="col-6 over-right">
+                        <div class="event-content">
+                            <div class="event-img">
+                                <img src="../image/khuyen-mai-img-4.jpeg" alt="">
+                                <button><i class="bi bi-link-45deg"></i>XEM NGAY</button>
+                            </div>
+                            <h5>HÈ NGẬP NẮNG - TAY NGẬP QUÀ</h5>
+                            <b>Từ: 03/06/2019</b>
+                            <b>Đến: 17/06/2019</b>
+                            <br>
+                            <b><i>Chi tiết chương trình</i></b>
+                            <a href="#">XEM TẠI ĐÂY</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 over-left">
+                        <div class="event-content">
+                            <div class="event-img">
+                                <img src="../image/khuyen-mai-img-5.jpeg" alt="">
+                                <button><i class="bi bi-link-45deg"></i>XEM NGAY</button>
+                            </div>
+                            <h5>QUỐC TẾ THIẾU NHI</h5>
+                            <b>Từ: 25/05/2019</b>
+                            <b>Đến: 03/06/2019</b>
+                            <br>
+                            <b><i>Chi tiết chương trình</i></b>
+                            <a href="#">XEM TẠI ĐÂY</a>
+                        </div>
+                    </div>
+                    <div class="col-6 over-right">
+                        <div class="event-content">
+                            <div class="event-img">
+                                <img src="../image/khuyen-mai-6.jpeg" alt="">
+                                <button><i class="bi bi-link-45deg"></i>XEM NGAY</button>
+                            </div>
+                            <h5>Tháng 3 Sách Trẻ</h5>
+                            <b>Từ: 09/03/2018</b>
+                            <b>Đến: 01/04/2018</b>
+                            <br>
+                            <b><i>Chi tiết chương trình</i></b>
+                            <a href="#">XEM TẠI ĐÂY</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 over-left">
+                        <div class="event-content">
+                            <div class="event-img">
+                                <img src="../image/khuyen-mai-7.jpeg" alt="">
+                                <button><i class="bi bi-link-45deg"></i>XEM NGAY</button>
+                            </div>
+                            <h5>Tặng voucher 50k cho đơn hàng Sách - Truyện 290k</h5>
+                            <b>Từ: 12/03/2018</b>
+                            <b>Đến: 19/03/2018</b>
+                            <br>
+                            <b><i>Chi tiết chương trình</i></b>
+                            <a href="#">XEM TẠI ĐÂY</a>
+                        </div>
+                    </div>
+                    <div class="col-6 over-right">
+                        <div class="event-content">
+                            <div class="event-img">
+                                <img src="../image/khuyen-mai-8.jpeg" alt="">
+                                <button><i class="bi bi-link-45deg"></i>XEM NGAY</button>
+                            </div>
+                            <h5>TẾT SUM VẦY - QUÀ NGẤT NGÂY</h5>
+                            <b>Từ: 29/01/2018</b>
+                            <b>Đến: 20/02/2018</b>
+                            <br>
+                            <b><i>Chi tiết chương trình</i></b>
+                            <a href="#">XEM TẠI ĐÂY</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="share">
+        <div class="container p-0">
+            <div class="row">
+                <div class="col-2">
+                    <img src="../image/canh-cam-letter.png" alt="">
+                </div>
+                <div class="col-4">
+                    <h4>Đăng ký nhận bản tin từ Bookbuy</h4>
+                    <p>Đừng bỏ lỡ những tin nhắn ưu đãi độc quyền dành riêng cho bạn</p>
+                </div>
+                <div class="col-6">
+                    <div class="input-group">
+                        <input type="text" class="form-control"
+                            aria-label="Dollar amount (with dot and two decimal places)" placeholder="Nhập địa chỉ email của bạn">
+                        <button class="input-group-text">NAM</button>
+                        <button class="input-group-text">NỮ</button>
+                        <button class="input-group-text">LGBT</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <p>HỖ TRỢ KHÁCH HÀNG</p>
+                    <a href="#">Sản phẩm & Đơn hàng: 0123 456 789</a>
+                    <a href="#">Kỹ thuật & Bảo hành: 0123 456 789</a>
+                    <a href="#">Điện thoại: (023) 3649 7153 (giờ hành chính)</a>
+                    <a href="#">Email: abc@gmail.com</a>
+                    <a href="#">Địa chỉ: Số 2, Phố B, Thi trấn A, Q1, TP.HCM</a>
+                </div>
+                <div class="col-3">
+                    <p>TRỢ GIÚP</p>
+                    <a href="#">Đăng ký nhận bản tin</a>
+                    <a href="#">Hướng dẫn mua hàng</a>
+                    <a href="#">Phương thức thanh toán</a>
+                    <a href="#">Phương thức vận chuyển</a>
+                    <a href="#">Chính sách đổi - trả</a>
+                </div>
+                <div class="col-3">
+                    <p>TÀI KHOẢN CỦA BẠN</p>
+                    <a href="#">Cập nhập tài khoản</a>
+                    <a href="#">Giỏ hàng</a>
+                    <a href="#">Lịch sử giao dịch</a>
+                    <a href="#">Sản phẩm yêu thích</a>
+                    <a href="#"></a>
+                </div>
+                <div class="col-3">
+                    <p>BOOKBUY</p>
+                    <a href="#">Giới thiệu bookbuy.vn</a>
+                    <a href="#">Bookbuy trên Facebook</a>
+                    <a href="#">Liên hệ bookbuy</a>
+                    <a href="#">Đặt hàng theo yêu cầu</a>
+                    <a href="#">Tích lũy BBxu</a>
+                </div>
+            </div>
+            <div class="hr"><hr style="margin-bottom:3px;"></div>
+            <div class="row">
+                <div class="col-8 transaction">
+                    Chấp nhận thanh toán :
+                    <img src="../image/tien-mat.jpeg" alt="">
+                    <img src="../image/vib-bank.jpeg" alt="">
+                    <img src="../image/bidv-bank.jpeg" alt="">
+                    <img src="../image/vp-bank.png" alt="">
+                </div>
+                <div class="col-4">Làm bạn với BookBuy :
+                    <img src="../image/face.jpeg" alt="">
+                    <img src="../image/zalo.png" alt="">
+                    <img src="../image/instagram.jpeg" alt="">
+                    <img src="../image/twitter.png" alt="">
+                    <img src="../image/youtube.png" alt="">
+                </div>
+            </div>
+            <hr style="margin-top:3px;">
+        </div>
+    </div>
+</body>
+
+</html>

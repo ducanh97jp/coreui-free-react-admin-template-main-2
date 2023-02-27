@@ -1,0 +1,1219 @@
+body {
+  background-color: #f8f9fa;
+}
+
+.header-top {
+  width: 100%;
+  height: 40px;
+  background-color: rgb(231, 231, 231);
+  padding: 0;
+}
+.header-top .row {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.header-top .col-5 {
+  padding: 0;
+}
+.header-top .col-5 ul {
+  display: flex;
+  align-items: flex-start;
+  padding: 0;
+}
+.header-top .col-5 ul li {
+  list-style-type: none;
+  margin: 5px;
+  padding: 2.5px;
+}
+.header-top .col-5 ul li a {
+  text-decoration: none;
+  padding: 10px;
+  color: rgb(112, 112, 112);
+  font-size: 12px;
+}
+.header-top .col-5 ul li a .bi {
+  padding: 10px;
+}
+.header-top .col-5 ul li:hover {
+  background-color: white;
+}
+.header-top .col-7 ul {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.header-top .col-7 ul li {
+  list-style-type: none;
+  margin: 5px;
+  padding: 2.5px;
+}
+.header-top .col-7 ul li a {
+  text-decoration: none;
+  padding: 10px;
+  color: rgb(112, 112, 112);
+  font-size: 12px;
+}
+.header-top .col-7 ul li a .bi {
+  padding: 10px;
+}
+.header-top .col-7 ul li:hover {
+  background-color: white;
+}
+
+.header-bottom {
+  height: 70px;
+  background-color: #f8f9fa;
+}
+.header-bottom .container {
+  padding: 0;
+}
+.header-bottom .header-logo {
+  margin-top: 20px;
+  padding: 0;
+}
+.header-bottom .header-logo img {
+  width: 80%;
+}
+.header-bottom .header__search {
+  position: relative;
+  margin-top: 10px;
+}
+.header-bottom .header__search .input-group {
+  height: 50px;
+}
+.header-bottom .header__search .input-group button {
+  background-color: white;
+  border: none;
+}
+.header-bottom .header__search .input-group button .bi {
+  color: tomato;
+  font-weight: bold;
+}
+.header-bottom .header__search .input-group input {
+  border: none;
+  font-size: 14px;
+}
+.header-bottom .header__search .input-group .sum {
+  border-right: 3px solid #f8f9fa;
+  width: 100px;
+  font-size: 14px;
+}
+.header-bottom .header__phone-number {
+  padding: 15px;
+}
+.header-bottom .header__phone-number .bi {
+  font-size: 30px;
+  color: tomato;
+}
+.header-bottom .header__phone-number h6 {
+  font-size: 17px;
+  color: tomato;
+  margin-bottom: 0;
+}
+.header-bottom .header__phone-number p {
+  font-size: 14px;
+}
+.header-bottom .header__shop {
+  padding: 15px;
+}
+.header-bottom .header__shop .bi {
+  padding: 15px 10px;
+  color: tomato;
+  font-size: 30px;
+}
+.header-bottom .header__shop p {
+  padding: 10px;
+}
+
+.nav .container {
+  height: 60px;
+  background-color: white;
+}
+
+.nav .row .col-3 {
+  list-style-type: none;
+  font-size: 16px;
+  padding: 5px 10px;
+  height: 60px;
+  border-right: 2px solid #f8f9fa;
+  position: relative;
+}
+.nav .row .col-3 a {
+  text-decoration: none;
+  color: black;
+}
+.nav .row .col-3 .bi {
+  font-size: 30px;
+  padding: 10px;
+}
+.nav .row .col-3 .col-8 {
+  padding: 10px 15px;
+}
+.nav .row .col-3 .arrow {
+  padding-top: 12px;
+  padding-right: 15px;
+}
+.nav .row .col-3 .arrow .bi {
+  font-size: 16px;
+}
+.nav .row .col-3:hover {
+  border: 2px solid #f1f2f3;
+}
+.nav .row .col-3:hover .menu-link {
+  color: tomato;
+}
+.nav .row .col-3:hover .nav-menu {
+  display: block;
+}
+.nav .row .col-4 {
+  list-style-type: none;
+  font-size: 16px;
+  padding: 5px 10px;
+  height: 60px;
+}
+.nav .row .col-4 a {
+  text-decoration: none;
+  color: black;
+}
+.nav .row .col-4 img {
+  width: 14%;
+  padding: 10px;
+}
+.nav .row .col-4:hover .menu-link {
+  color: tomato;
+}
+.nav .row .col-5 {
+  list-style-type: none;
+  font-size: 16px;
+  padding: 5px 10px;
+  height: 60px;
+}
+.nav .row .col-5 a {
+  text-decoration: none;
+  color: black;
+}
+.nav .row .col-5 img {
+  width: 11%;
+  padding: 10px;
+}
+.nav .row .col-5:hover .menu-link {
+  color: tomato;
+}
+
+.nav-menu {
+  background-color: white;
+  position: absolute;
+  top: 58px;
+  left: 0;
+  width: 100%;
+  display: none;
+  padding: 0;
+}
+.nav-menu a {
+  font-size: 14px;
+}
+.nav-menu .menu-bottom:hover {
+  border: 2px solid #f1f2f3;
+}
+.nav-menu .menu-bottom:hover .menu-bottom-link {
+  color: tomato;
+}
+.nav-menu .menu-bottom {
+  position: relative;
+  list-style-type: none;
+  padding: 7px;
+  padding-left: 39px;
+}
+.nav-menu .menu-secondary {
+  background-color: white;
+  padding: 0;
+  position: absolute;
+  width: 200px;
+  top: 0;
+  left: 100%;
+  display: none;
+  z-index: 1;
+}
+.nav-menu .menu-secondary li {
+  list-style-type: none;
+  padding: 7px;
+  padding-left: 39px;
+}
+.nav-menu .menu-secondary li:hover {
+  border: 2px solid #f1f2f3;
+}
+.nav-menu .menu-secondary li:hover a {
+  color: tomato;
+}
+.nav-menu .menu-bottom:hover .menu-secondary {
+  display: block;
+}
+
+.secondary-nav span {
+  padding: 10px;
+  color: rgba(128, 128, 128, 0.7);
+  display: inline-block;
+}
+.secondary-nav .nav-link {
+  color: rgba(128, 128, 128, 0.7);
+  text-decoration: none;
+  display: inline-block;
+}
+.secondary-nav .story-name {
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+}
+.secondary-nav .nav-link:hover {
+  color: lightgray;
+  text-decoration: underline;
+}
+.secondary-nav .story-name:hover {
+  color: rgba(128, 128, 128, 0.7);
+  text-decoration: underline;
+}
+
+.main-detail .container {
+  background-color: white;
+  padding: 0;
+}
+
+.main-detail__img {
+  padding: 0;
+}
+.main-detail__img img {
+  width: 100%;
+}
+
+.main-detail__body {
+  padding: 0;
+}
+.main-detail__body .col-8 {
+  padding: 0;
+}
+.main-detail__body a {
+  color: tomato;
+  text-decoration: none;
+  font-size: 14px;
+}
+.main-detail__body a:hover {
+  text-decoration: underline;
+}
+.main-detail__body p {
+  font-size: 12px;
+  margin: 4px;
+}
+.main-detail__body h4 {
+  color: tomato;
+}
+.main-detail__body .status {
+  color: rgba(128, 128, 128, 0.7);
+  font-size: 12px;
+  margin: 0;
+}
+.main-detail__body .status span {
+  color: tomato;
+}
+.main-detail__body small {
+  font-size: 12px;
+}
+.main-detail__body small a {
+  color: black;
+  font-size: 12px;
+}
+.main-detail__body small a:hover {
+  color: rgb(24, 136, 102);
+}
+.main-detail__body .number {
+  font-size: 16px;
+  padding: 20px 0;
+}
+.main-detail__body .number button {
+  background-color: white;
+  height: 30px;
+  width: 30px;
+  border: 1px solid lightgray;
+  text-align: center;
+}
+.main-detail__body .number input {
+  height: 30px;
+  width: 50px;
+  color: tomato;
+  border: 1px solid lightgray;
+  text-align: center;
+}
+.main-detail__body .button-buy {
+  padding: 0;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+.main-detail__body .button-buy .button-buy__in-cart {
+  height: 50px;
+  width: 200px;
+  border: 1px solid tomato;
+  border-radius: 5px;
+  background-color: white;
+  color: tomato;
+}
+.main-detail__body .button-buy .button-buy__in-cart:hover {
+  background-color: tomato;
+  color: white;
+}
+.main-detail__body .button-buy .button-buy__buy {
+  height: 50px;
+  width: 200px;
+  margin-left: 20px;
+  background-color: tomato;
+  color: white;
+  border: 1px solid tomato;
+  border-radius: 5px;
+}
+.main-detail__body .button-buy .button-buy__buy:hover {
+  background-color: rgb(223, 85, 61);
+}
+.main-detail__body .body-text {
+  font-size: 16px;
+  padding-left: 0;
+}
+.main-detail__body .note span {
+  color: tomato;
+}
+.main-detail__body .note a {
+  color: rgb(0, 155, 255);
+  font-size: 16px;
+}
+
+.main-detail__body .col-4 .secondary {
+  border: 1px solid #f8f9fa;
+  margin: 10px 20px;
+  margin-left: 0;
+}
+.main-detail__body .col-4 .secondary ul {
+  padding: 0;
+}
+.main-detail__body .col-4 .secondary ul li {
+  list-style-type: none;
+  padding: 5px 10px;
+  font-size: 14px;
+}
+.main-detail__body .col-4 .secondary ul li .bi {
+  padding: 5px;
+}
+.main-detail__body .col-4 .secondary p {
+  padding: 10px;
+  color: tomato;
+  font-size: 12px;
+}
+.main-detail__body .col-4 .secondary .secondary-button {
+  padding: 10px;
+}
+.main-detail__body .col-4 .secondary .secondary-button button {
+  height: 23px;
+  border-radius: 10px;
+  font-size: 12px;
+  color: white;
+  border: none;
+}
+.main-detail__body .col-4 .secondary .secondary-button button .bi {
+  padding-right: 2px;
+}
+.main-detail__body .col-4 .secondary .secondary-button .button-like {
+  background-color: blue;
+}
+.main-detail__body .col-4 .secondary .secondary-button .button-like:hover {
+  background-color: rgb(4, 4, 211);
+}
+.main-detail__body .col-4 .secondary .secondary-button .button-twitter {
+  background-color: dodgerblue;
+}
+.main-detail__body .col-4 .secondary .secondary-button .button-twitter:hover {
+  background-color: rgb(25, 124, 223);
+}
+.main-detail__body .col-4 .secondary .secondary-button .button-save {
+  background: red;
+}
+.main-detail__body .col-4 .secondary .secondary-button .button-save:hover {
+  background-color: rgb(217, 2, 2);
+}
+
+.main-same-kind .container {
+  padding: 0;
+}
+.main-same-kind .container .row {
+  height: 50px;
+  background-color: white;
+  margin: 2px 0;
+}
+.main-same-kind .container .row .col-4 {
+  font-size: 20px;
+  padding-top: 20px;
+  padding-left: 20px;
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+}
+.main-same-kind .container .row p {
+  padding-top: 20px;
+  font-size: 14px;
+}
+.main-same-kind .container .row .col-2 {
+  font-size: 20px;
+  padding-top: 20px;
+  padding-left: 20px;
+  color: tomato;
+  text-decoration: none;
+}
+
+.main-same-kind-list .container {
+  background-color: white;
+}
+.main-same-kind-list .container .card {
+  border: none;
+  height: 320px;
+}
+.main-same-kind-list .container .card img {
+  width: 150px;
+  height: 200px;
+  margin: auto;
+  margin-top: 5px;
+}
+.main-same-kind-list .container .card .card-text {
+  font-size: 14px;
+  margin: 0;
+  height: 40px;
+  overflow: hidden;
+  color: black;
+  text-decoration: none;
+}
+.main-same-kind-list .container .card .card-text:hover {
+  text-decoration: underline;
+  color: rgb(24, 136, 102);
+}
+.main-same-kind-list .container .card .bro {
+  color: rgb(35, 171, 80);
+  font-size: 14px;
+  display: block;
+  text-decoration: none;
+}
+.main-same-kind-list .container .card .card-money {
+  color: tomato;
+  padding-right: 0;
+  margin: 0;
+  font-size: 14px;
+}
+.main-same-kind-list .container .card .card-money:hover {
+  text-decoration: underline;
+}
+.main-same-kind-list .container .card .card-show-right {
+  position: absolute;
+  width: 220px;
+  background-color: #f8f9fa;
+  top: 0;
+  display: none;
+  z-index: 1;
+  padding: 10px;
+  border: 1px solid rgb(194, 194, 194);
+  border-radius: 10px;
+  left: 90%;
+}
+.main-same-kind-list .container .card .card-show-right .show-head {
+  font-size: 14px;
+  display: block;
+}
+.main-same-kind-list .container .card .card-show-right .show-author {
+  font-size: 12px;
+  text-decoration: none;
+  color: rgb(24, 136, 102);
+}
+.main-same-kind-list .container .card .card-show-right .show-author:hover {
+  text-decoration: underline;
+}
+.main-same-kind-list .container .card .card-show-right .show-text {
+  font-size: 12px;
+  margin: 0;
+}
+.main-same-kind-list .container .card .card-show-right .show-text-more {
+  text-decoration: none;
+  font-size: 12px;
+  display: block;
+}
+.main-same-kind-list .container .card .card-show-right .show-text-more:hover {
+  text-decoration: underline;
+}
+.main-same-kind-list .container .card .card-show-right .show-money {
+  color: tomato;
+}
+.main-same-kind-list .container .card .card-show-right .show-in-shop {
+  border: none;
+  height: 50px;
+  width: 200px;
+  margin: 5px 0;
+  border-radius: 5px;
+  color: white;
+  background-color: rgb(24, 136, 102);
+}
+.main-same-kind-list .container .card .card-show-right .show-in-shop:hover {
+  background-color: tomato;
+}
+.main-same-kind-list .container .card .card-show-right .show-buy {
+  border: none;
+  height: 50px;
+  width: 200px;
+  margin: 5px 0;
+  border-radius: 5px;
+  color: white;
+  background-color: tomato;
+}
+.main-same-kind-list .container .card .card-show-right .show-buy:hover {
+  background-color: rgb(208, 82, 60);
+}
+.main-same-kind-list .container .card .card-show-right .show-like {
+  border: none;
+  height: 50px;
+  width: 200px;
+  margin: 5px 0;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: white;
+}
+.main-same-kind-list .container .card .card-show-right .show-like .bi {
+  color: red;
+  padding-right: 5px;
+}
+.main-same-kind-list .container .card .card-show-left {
+  position: absolute;
+  width: 220px;
+  background-color: #f8f9fa;
+  top: 0;
+  display: none;
+  z-index: 1;
+  padding: 10px;
+  border: 1px solid rgb(194, 194, 194);
+  border-radius: 10px;
+  left: -220px;
+}
+.main-same-kind-list .container .card .card-show-left .show-head {
+  font-size: 14px;
+  display: block;
+}
+.main-same-kind-list .container .card .card-show-left .show-author {
+  font-size: 12px;
+  text-decoration: none;
+  color: rgb(24, 136, 102);
+}
+.main-same-kind-list .container .card .card-show-left .show-author:hover {
+  text-decoration: underline;
+}
+.main-same-kind-list .container .card .card-show-left .show-text {
+  font-size: 12px;
+  margin: 0;
+}
+.main-same-kind-list .container .card .card-show-left .show-text-more {
+  text-decoration: none;
+  font-size: 12px;
+  display: block;
+}
+.main-same-kind-list .container .card .card-show-left .show-text-more:hover {
+  text-decoration: underline;
+}
+.main-same-kind-list .container .card .card-show-left .show-money {
+  color: tomato;
+}
+.main-same-kind-list .container .card .card-show-left .show-in-shop {
+  border: none;
+  height: 50px;
+  width: 200px;
+  margin: 5px 0;
+  border-radius: 5px;
+  color: white;
+  background-color: rgb(24, 136, 102);
+}
+.main-same-kind-list .container .card .card-show-left .show-in-shop:hover {
+  background-color: tomato;
+}
+.main-same-kind-list .container .card .card-show-left .show-buy {
+  border: none;
+  height: 50px;
+  width: 200px;
+  margin: 5px 0;
+  border-radius: 5px;
+  color: white;
+  background-color: tomato;
+}
+.main-same-kind-list .container .card .card-show-left .show-buy:hover {
+  background-color: rgb(208, 82, 60);
+}
+.main-same-kind-list .container .card .card-show-left .show-like {
+  border: none;
+  height: 50px;
+  width: 200px;
+  margin: 5px 0;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: white;
+}
+.main-same-kind-list .container .card .card-show-left .show-like .bi {
+  color: red;
+  padding-right: 5px;
+}
+.main-same-kind-list .container .card:hover .card-show-right {
+  display: block;
+}
+.main-same-kind-list .container .card:hover .card-show-left {
+  display: block;
+}
+
+.main-information .container {
+  padding: 0;
+}
+
+.information-table {
+  background-color: white;
+  margin-top: 10px;
+  padding: 10px;
+}
+.information-table h3 {
+  padding-top: 10px;
+}
+.information-table table {
+  border: 1px solid #f8f9fa;
+  width: 100%;
+}
+.information-table tr:nth-child(odd) {
+  background-color: #f8f9fa;
+}
+.information-table tr:nth-child(even) {
+  background-color: white;
+}
+.information-table td {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.information-introduce {
+  background-color: white;
+  margin-top: 10px;
+  padding: 10px;
+}
+.information-introduce h3 {
+  padding-top: 10px;
+}
+.information-introduce h5 {
+  padding: 20px;
+  text-align: center;
+  color: blue;
+  font-weight: bold;
+}
+.information-introduce p {
+  padding: 0 20px;
+}
+.information-introduce .introduce-link {
+  font-weight: bold;
+  padding: 20px 20px;
+}
+.information-introduce .introduce-link a {
+  color: tomato;
+  text-decoration: none;
+}
+.information-introduce .button {
+  text-align: center;
+  padding-bottom: 10px;
+}
+.information-introduce .button button {
+  text-align: center;
+  height: 40px;
+  width: 300px;
+  border-radius: 5px;
+  background-color: tomato;
+  color: white;
+  border: none;
+  font-size: 14px;
+}
+.information-introduce .button button:hover {
+  background-color: rgb(217, 2, 2);
+}
+
+.main-information .col-3 {
+  padding: 0;
+  margin-top: 10px;
+}
+
+.main-introduce {
+  background-color: white;
+  margin-right: 10px;
+  overflow-y: auto;
+  height: 855px;
+}
+.main-introduce h4 {
+  padding: 20px 10px;
+}
+.main-introduce h4 a {
+  text-decoration: none;
+  color: black;
+}
+.main-introduce .card {
+  border: none;
+  height: 320px;
+}
+.main-introduce .card img {
+  width: 150px;
+  height: 200px;
+  margin: auto;
+  margin-top: 5px;
+}
+.main-introduce .card .card-text {
+  font-size: 14px;
+  margin: 0;
+  height: 40px;
+  overflow: hidden;
+  color: black;
+  text-decoration: none;
+}
+.main-introduce .card .card-text:hover {
+  text-decoration: underline;
+  color: rgb(24, 136, 102);
+}
+.main-introduce .card .bro {
+  color: rgb(35, 171, 80);
+  font-size: 14px;
+  display: block;
+  text-decoration: none;
+}
+.main-introduce .card .card-money {
+  color: tomato;
+  padding-right: 0;
+  margin: 0;
+  font-size: 14px;
+  padding-left: 10px;
+}
+.main-introduce .card .card-money:hover {
+  text-decoration: underline;
+}
+.main-introduce .card .reverse-money {
+  font-size: 12px;
+  padding: 0;
+  margin: 0;
+}
+.main-introduce .card .sale-money {
+  font-size: 12px;
+  padding: 0;
+  margin: 0;
+  background-color: tomato;
+  color: white;
+}
+.main-introduce .link {
+  text-align: center;
+  font-size: 12px;
+}
+.main-introduce .link a {
+  text-decoration: none;
+  color: black;
+}
+.main-introduce .link a:hover {
+  color: rgb(24, 136, 102);
+  text-decoration: underline;
+}
+
+.main-together .container {
+  padding: 0;
+  margin-top: 10px;
+  background-color: white;
+}
+.main-together .container .carousel-inner {
+  overflow: visible;
+}
+.main-together .container .main-together-head {
+  background-color: white;
+  padding-top: 15px;
+}
+.main-together .container .main-together-head a {
+  font-size: 20px;
+  padding-top: 20px;
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+}
+.main-together .container .main-together-head .together-link-looked:hover {
+  color: rgb(24, 136, 102);
+  text-decoration: underline;
+}
+.main-together .container .main-together-head .together-link {
+  color: tomato;
+  padding-left: 20px;
+}
+.main-together .container .main-together-head .together-link:hover {
+  text-decoration: underline;
+}
+.main-together .container .main-together-head span {
+  color: rgba(128, 128, 128, 0.7);
+  padding: 10px;
+}
+.main-together .container hr {
+  margin: 15px;
+  color: rgb(171, 171, 171);
+}
+.main-together .container .carousel-body {
+  background-color: white;
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  padding-top: 10px;
+}
+.main-together .container .carousel-body .card {
+  border: none;
+  height: 300px;
+}
+.main-together .container .carousel-body .card img {
+  width: 150px;
+  height: 200px;
+  margin: auto;
+  margin-top: 5px;
+}
+.main-together .container .carousel-body .card .card-text {
+  font-size: 12px;
+  margin: 0;
+  height: 40px;
+  overflow: hidden;
+  text-decoration: none;
+  color: black;
+}
+.main-together .container .carousel-body .card .card-text:hover {
+  color: rgb(24, 136, 102);
+  text-decoration: underline;
+}
+.main-together .container .carousel-body .card .bro {
+  display: block;
+  color: rgb(35, 171, 80);
+  font-size: 12px;
+  text-decoration: none;
+}
+.main-together .container .carousel-body .card .bro:hover {
+  text-decoration: underline;
+}
+.main-together .container .carousel-body .card .card-money {
+  color: tomato;
+  padding-right: 0;
+  margin: 0;
+  font-size: 14px;
+}
+.main-together .container .carousel-body .card .card-show-right {
+  position: absolute;
+  width: 220px;
+  background-color: #f8f9fa;
+  top: 0;
+  display: none;
+  z-index: 1;
+  padding: 10px;
+  border: 1px solid rgb(194, 194, 194);
+  border-radius: 10px;
+  left: 90%;
+}
+.main-together .container .carousel-body .card .card-show-right .show-head {
+  font-size: 14px;
+  display: block;
+}
+.main-together .container .carousel-body .card .card-show-right .show-author {
+  font-size: 12px;
+  text-decoration: none;
+  color: rgb(24, 136, 102);
+}
+.main-together .container .carousel-body .card .card-show-right .show-author:hover {
+  text-decoration: underline;
+}
+.main-together .container .carousel-body .card .card-show-right .show-text {
+  font-size: 12px;
+  margin: 0;
+}
+.main-together .container .carousel-body .card .card-show-right .show-text-more {
+  text-decoration: none;
+  font-size: 12px;
+  display: block;
+}
+.main-together .container .carousel-body .card .card-show-right .show-text-more:hover {
+  text-decoration: underline;
+}
+.main-together .container .carousel-body .card .card-show-right .show-money {
+  color: tomato;
+}
+.main-together .container .carousel-body .card .card-show-right .show-in-shop {
+  border: none;
+  height: 50px;
+  width: 200px;
+  margin: 5px 0;
+  border-radius: 5px;
+  color: white;
+  background-color: rgb(24, 136, 102);
+}
+.main-together .container .carousel-body .card .card-show-right .show-in-shop:hover {
+  background-color: tomato;
+}
+.main-together .container .carousel-body .card .card-show-right .show-buy {
+  border: none;
+  height: 50px;
+  width: 200px;
+  margin: 5px 0;
+  border-radius: 5px;
+  color: white;
+  background-color: tomato;
+}
+.main-together .container .carousel-body .card .card-show-right .show-buy:hover {
+  background-color: rgb(208, 82, 60);
+}
+.main-together .container .carousel-body .card .card-show-right .show-like {
+  border: none;
+  height: 50px;
+  width: 200px;
+  margin: 5px 0;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: white;
+}
+.main-together .container .carousel-body .card .card-show-right .show-like .bi {
+  color: red;
+  padding-right: 5px;
+}
+.main-together .container .carousel-body .card .card-show-left {
+  position: absolute;
+  width: 220px;
+  background-color: #f8f9fa;
+  top: 0;
+  display: none;
+  z-index: 1;
+  padding: 10px;
+  border: 1px solid rgb(194, 194, 194);
+  border-radius: 10px;
+  left: -220px;
+}
+.main-together .container .carousel-body .card .card-show-left .show-head {
+  font-size: 14px;
+  display: block;
+}
+.main-together .container .carousel-body .card .card-show-left .show-author {
+  font-size: 12px;
+  text-decoration: none;
+  color: rgb(24, 136, 102);
+}
+.main-together .container .carousel-body .card .card-show-left .show-author:hover {
+  text-decoration: underline;
+}
+.main-together .container .carousel-body .card .card-show-left .show-text {
+  font-size: 12px;
+  margin: 0;
+}
+.main-together .container .carousel-body .card .card-show-left .show-text-more {
+  text-decoration: none;
+  font-size: 12px;
+  display: block;
+}
+.main-together .container .carousel-body .card .card-show-left .show-text-more:hover {
+  text-decoration: underline;
+}
+.main-together .container .carousel-body .card .card-show-left .show-money {
+  color: tomato;
+}
+.main-together .container .carousel-body .card .card-show-left .show-in-shop {
+  border: none;
+  height: 50px;
+  width: 200px;
+  margin: 5px 0;
+  border-radius: 5px;
+  color: white;
+  background-color: rgb(24, 136, 102);
+}
+.main-together .container .carousel-body .card .card-show-left .show-in-shop:hover {
+  background-color: tomato;
+}
+.main-together .container .carousel-body .card .card-show-left .show-buy {
+  border: none;
+  height: 50px;
+  width: 200px;
+  margin: 5px 0;
+  border-radius: 5px;
+  color: white;
+  background-color: tomato;
+}
+.main-together .container .carousel-body .card .card-show-left .show-buy:hover {
+  background-color: rgb(208, 82, 60);
+}
+.main-together .container .carousel-body .card .card-show-left .show-like {
+  border: none;
+  height: 50px;
+  width: 200px;
+  margin: 5px 0;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: white;
+}
+.main-together .container .carousel-body .card .card-show-left .show-like .bi {
+  color: red;
+  padding-right: 5px;
+}
+.main-together .container .carousel-body .card:hover .card-show-right {
+  display: block;
+}
+.main-together .container .carousel-body .card:hover .card-show-left {
+  display: block;
+}
+.main-together .container .carousel-control-prev {
+  background-color: rgb(131, 129, 129);
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  position: absolute;
+  top: 80px;
+}
+.main-together .container .carousel-control-next {
+  background-color: rgb(131, 129, 129);
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  position: absolute;
+  top: 80px;
+}
+
+.main-comment .container {
+  background-color: white;
+  margin-top: 5px;
+  padding: 0;
+}
+.main-comment .container h4 {
+  padding: 20px;
+  margin-bottom: 0;
+  font-size: 22px;
+}
+.main-comment .container hr {
+  margin-top: 0;
+  color: rgb(171, 171, 171);
+}
+.main-comment .container p {
+  font-size: 14px;
+  background-color: rgb(253, 239, 219);
+  padding: 30px 20px;
+  margin: 0 20px;
+}
+.main-comment .container p a {
+  color: rgb(24, 136, 102);
+  text-decoration: none;
+}
+.main-comment .container p a:hover {
+  text-decoration: underline;
+}
+.main-comment .container h5 {
+  color: tomato;
+  padding: 20px;
+}
+.main-comment .container div {
+  height: 30px;
+}
+
+.main-comment-content .container {
+  background-color: white;
+  margin-top: 10px;
+}
+.main-comment-content .container div {
+  width: 50%;
+  padding-bottom: 10px;
+}
+.main-comment-content .container div p {
+  font-size: 14px;
+  display: inline-block;
+  padding: 12px 0;
+}
+.main-comment-content .container div .comment-number {
+  font-weight: bold;
+}
+.main-comment-content .container div .comment-select {
+  display: inline;
+  float: right;
+  text-align: right;
+  padding-top: 12px;
+}
+.main-comment-content .container div .comment-select p {
+  display: inline;
+}
+.main-comment-content .container div .comment-select select {
+  background-color: #f8f9fa;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px;
+}
+.main-comment-content .container div hr {
+  color: rgb(171, 171, 171);
+  margin-bottom: 10px;
+}
+.main-comment-content .container div input {
+  height: 50px;
+  width: 100%;
+  color: rgb(213, 213, 213);
+  border: 1px solid rgb(213, 213, 213);
+  padding: 20px;
+  margin-top: 10px;
+}
+.main-comment-content .container div a {
+  font-size: 12px;
+  text-decoration: none;
+  color: rgb(7, 7, 189);
+}
+.main-comment-content .container div a img {
+  width: 20px;
+  margin-top: -5px;
+  padding-right: 5px;
+}
+
+.share {
+  margin-top: 10px;
+}
+.share .input-group {
+  border-style: inset;
+}
+.share .col-4 {
+  padding-top: 30px;
+}
+.share .col-4 h4 {
+  color: tomato;
+  font-size: 20px;
+}
+.share .col-4 p {
+  font-size: 12px;
+}
+.share .col-6 {
+  padding-top: 30px;
+}
+.share .col-6 input {
+  font-size: 12px;
+  opacity: 0.2;
+  height: 30px;
+  border-radius: 0;
+}
+.share .col-6 button {
+  background-color: tomato;
+  color: white;
+  height: 30px;
+  border-radius: 0;
+}
+
+.footer .container {
+  margin-top: 30px;
+  padding: 0;
+}
+.footer .container p {
+  font-size: 14px;
+}
+.footer .container a {
+  font-size: 12px;
+  color: black;
+  text-decoration: none;
+  display: block;
+}
+.footer .container .transaction {
+  font-size: 12px;
+}
+.footer .container .transaction img {
+  width: 40px;
+  height: 30px;
+}
+.footer .container .col-4 {
+  font-size: 12px;
+}
+.footer .container .col-4 img {
+  width: 30px;
+  height: 30px;
+}/*# sourceMappingURL=detail.css.map */

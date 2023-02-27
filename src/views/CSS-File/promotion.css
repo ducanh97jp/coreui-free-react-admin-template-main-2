@@ -1,0 +1,530 @@
+body {
+  background-color: white;
+}
+
+.header-top {
+  width: 100%;
+  height: 40px;
+  background-color: rgb(231, 231, 231);
+  padding: 0;
+}
+.header-top .row {
+  margin: 0;
+}
+.header-top .head-top-left {
+  padding: 0;
+}
+.header-top .head-top-left ul {
+  display: flex;
+  align-items: flex-start;
+  padding: 0;
+}
+.header-top .head-top-left ul li {
+  list-style-type: none;
+  margin: 5px;
+  line-height: 30px;
+}
+.header-top .head-top-left ul li a {
+  text-decoration: none;
+  padding: 7px;
+  color: rgb(112, 112, 112);
+  font-size: 12px;
+}
+.header-top .head-top-left ul li a .bi {
+  padding: 0 5px;
+}
+.header-top .head-top-left ul li a .bi-telephone-fill {
+  background-color: red;
+  color: white;
+  padding: 1px;
+  margin-left: 4px;
+}
+.header-top .head-top-left ul li b {
+  font-size: 14px;
+  color: tomato;
+}
+.header-top .head-top-left ul .list-follow a {
+  background-color: dodgerblue;
+  color: white;
+  border-radius: 3px;
+  padding: 3px;
+}
+.header-top .head-top-left ul li:hover {
+  background-color: white;
+}
+.header-top .head-top-right ul {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.header-top .head-top-right ul li {
+  list-style-type: none;
+  margin: 5px;
+  padding: 2.5px;
+}
+.header-top .head-top-right ul li a {
+  text-decoration: none;
+  padding: 7px;
+  color: rgb(112, 112, 112);
+  font-size: 12px;
+}
+.header-top .head-top-right ul li a .bi {
+  padding: 0 5px;
+}
+.header-top .head-top-right ul li:hover {
+  background-color: white;
+}
+
+.header-bottom {
+  height: 70px;
+  background-color: whiter;
+}
+.header-bottom .container {
+  padding: 0;
+}
+.header-bottom .header-logo {
+  margin-top: 20px;
+  padding: 0;
+}
+.header-bottom .header-logo img {
+  width: 80%;
+}
+.header-bottom .header__search {
+  position: relative;
+  margin-top: 15px;
+}
+.header-bottom .header__search .input-group {
+  height: 30px;
+}
+.header-bottom .header__search .input-group button {
+  background-color: white;
+  border: 1px solid rgb(170, 170, 170);
+}
+.header-bottom .header__search .input-group input {
+  font-size: 14px;
+  border: 1px solid rgb(170, 170, 170);
+}
+.header-bottom .header__search .input-group .sum {
+  border-right: 3px solid #f8f9fa;
+  width: 100px;
+  font-size: 14px;
+}
+.header-bottom .header__search .input-group .search {
+  background-color: tomato;
+  color: white;
+  border-color: tomato;
+}
+.header-bottom .dropdown {
+  margin-top: 15px;
+}
+.header-bottom .dropdown .btn {
+  background-color: white;
+  color: rgb(112, 112, 112);
+  border: none;
+  font-size: 16px;
+}
+.header-bottom .dropdown .btn .bi {
+  padding: 0 7px;
+}
+.header-bottom .dropdown .btn:hover {
+  background-color: rgb(220, 220, 220);
+}
+.header-bottom .dropdown ul {
+  padding: 0;
+}
+.header-bottom .dropdown ul li {
+  border: 1px solid rgb(231, 231, 231);
+}
+.header-bottom .header__shop {
+  margin-top: 20px;
+  color: rgb(112, 112, 112);
+  font-size: 16px;
+  text-align: right;
+}
+.header-bottom .header__shop .bi {
+  padding: 0 7px;
+}
+
+.nav .menu {
+  border: 2px solid rgb(220, 220, 220);
+  position: relative;
+  display: inline-block;
+  padding: 5px 10px;
+}
+.nav .menu .menu-link {
+  font-size: 16px;
+  position: relative;
+}
+.nav .menu .menu-link .bi {
+  padding: 0 10px;
+}
+.nav .menu .menu-link .bi-list {
+  font-weight: bold;
+  font-size: 20px;
+}
+.nav .menu .nav-menu {
+  list-style-type: none;
+  font-size: 16px;
+  padding: 5px 10px;
+  padding: 0;
+  position: absolute;
+  border: 2px solid rgb(220, 220, 220);
+  top: 40px;
+  left: -2px;
+  width: 248px;
+  background-color: white;
+  z-index: 1;
+  display: none;
+}
+.nav .menu .nav-menu a {
+  text-decoration: none;
+  color: black;
+}
+.nav .menu .nav-menu .menu-bottom {
+  padding: 7px;
+  padding-left: 15px;
+  position: relative;
+}
+.nav .menu .nav-menu .menu-bottom:hover .menu-bottom-link {
+  color: tomato;
+}
+.nav .menu .nav-menu .menu-bottom:hover .menu-secondary {
+  display: block;
+}
+.nav .menu .nav-menu .menu-secondary {
+  list-style-type: none;
+  font-size: 16px;
+  padding: 5px 10px;
+  width: 200px;
+  position: absolute;
+  background-color: white;
+  top: 0;
+  left: 244px;
+  border: 2px solid rgb(220, 220, 220);
+  display: none;
+}
+.nav .menu .nav-menu .menu-secondary a {
+  text-decoration: none;
+  color: black;
+}
+.nav .menu .nav-menu .menu-secondary li {
+  padding: 7px;
+}
+.nav .menu .nav-menu .menu-secondary li:hover a {
+  color: tomato;
+}
+.nav .menu .nav-menu:hover {
+  color: tomato;
+}
+.nav .menu:hover .menu-link {
+  color: tomato;
+}
+.nav .menu:hover .nav-menu {
+  display: block;
+}
+
+.main .container h1 {
+  color: white;
+  background-color: tomato;
+  border-radius: 20px;
+  padding: 5px 40px;
+  display: inline-block;
+  font-size: 40px;
+  font-weight: bold;
+}
+.main .container h4 {
+  color: white;
+  background-color: tomato;
+  border-radius: 20px;
+  padding: 5px 40px;
+  display: inline-block;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 30px 0;
+}
+
+.main-event-today {
+  background-color: rgb(240, 240, 240);
+}
+.main-event-today .event-img {
+  margin: 10px;
+  transition: 0.5s;
+  position: relative;
+}
+.main-event-today .event-img img {
+  width: 100%;
+}
+.main-event-today .event-img button {
+  position: absolute;
+  color: white;
+  background-color: tomato;
+  font-size: 16px;
+  padding: 5px 10px;
+  top: 45%;
+  left: 45%;
+  border: none;
+  display: none;
+}
+.main-event-today .event-img button .bi {
+  color: white;
+  font-size: 18px;
+  padding-right: 7px;
+}
+.main-event-today .event-img button:hover {
+  background-color: red;
+}
+.main-event-today .event-img:hover {
+  margin: 10px 0;
+}
+.main-event-today .event-img:hover button {
+  display: block;
+}
+.main-event-today h5 {
+  color: red;
+  font-weight: bold;
+  padding: 10px 5px;
+}
+.main-event-today b {
+  color: tomato;
+  padding: 10px 5px;
+  font-size: 14px;
+}
+.main-event-today #time {
+  color: red;
+}
+.main-event-today #time .bi {
+  padding: 5px;
+  color: red;
+}
+.main-event-today #times {
+  color: red;
+}
+.main-event-today #times .bi {
+  padding: 5px;
+  color: red;
+}
+.main-event-today i {
+  color: tomato;
+}
+.main-event-today a {
+  font-size: 22px;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+.main-event-today a:hover {
+  color: red;
+}
+
+.main-event-now {
+  width: 50%;
+  overflow: hidden;
+  background-color: rgb(240, 240, 240);
+}
+.main-event-now .event-img {
+  margin: 10px;
+  transition: 0.5s;
+  position: relative;
+}
+.main-event-now .event-img img {
+  width: 100%;
+}
+.main-event-now .event-img button {
+  position: absolute;
+  color: white;
+  background-color: tomato;
+  font-size: 16px;
+  padding: 5px 10px;
+  top: 45%;
+  left: 45%;
+  border: none;
+  display: none;
+}
+.main-event-now .event-img button .bi {
+  color: white;
+  font-size: 18px;
+  padding-right: 7px;
+}
+.main-event-now .event-img button:hover {
+  background-color: red;
+}
+.main-event-now .event-img:hover {
+  margin: 10px 0;
+}
+.main-event-now .event-img:hover button {
+  display: block;
+}
+.main-event-now h5 {
+  color: red;
+  font-weight: bold;
+  padding: 10px 5px;
+}
+.main-event-now b {
+  color: tomato;
+  padding: 10px 5px;
+  font-size: 14px;
+}
+.main-event-now #time {
+  color: red;
+}
+.main-event-now #time .bi {
+  padding: 5px;
+  color: red;
+}
+.main-event-now #times {
+  color: red;
+}
+.main-event-now #times .bi {
+  padding: 5px;
+  color: red;
+}
+.main-event-now i {
+  color: tomato;
+}
+.main-event-now a {
+  font-size: 22px;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+.main-event-now a:hover {
+  color: red;
+}
+
+.main-event-over .over-left {
+  padding-left: 0;
+}
+.main-event-over .over-right {
+  padding-right: 0;
+}
+.main-event-over .event-content {
+  background-color: rgb(240, 240, 240);
+}
+.main-event-over .event-content .event-img {
+  margin: 10px;
+  transition: 0.5s;
+  position: relative;
+}
+.main-event-over .event-content .event-img img {
+  width: 100%;
+}
+.main-event-over .event-content .event-img button {
+  position: absolute;
+  color: white;
+  background-color: tomato;
+  font-size: 16px;
+  padding: 5px 10px;
+  top: 45%;
+  left: 45%;
+  border: none;
+  display: none;
+}
+.main-event-over .event-content .event-img button .bi {
+  color: white;
+  font-size: 18px;
+  padding-right: 7px;
+}
+.main-event-over .event-content .event-img button:hover {
+  background-color: red;
+}
+.main-event-over .event-content .event-img:hover {
+  margin: 10px 0;
+}
+.main-event-over .event-content .event-img:hover button {
+  display: block;
+}
+.main-event-over .event-content h5 {
+  color: red;
+  font-weight: bold;
+  padding: 10px 5px;
+}
+.main-event-over .event-content b {
+  color: tomato;
+  padding: 10px 5px;
+  font-size: 14px;
+}
+.main-event-over .event-content #time {
+  color: red;
+}
+.main-event-over .event-content #time .bi {
+  padding: 5px;
+  color: red;
+}
+.main-event-over .event-content #times {
+  color: red;
+}
+.main-event-over .event-content #times .bi {
+  padding: 5px;
+  color: red;
+}
+.main-event-over .event-content i {
+  color: tomato;
+}
+.main-event-over .event-content a {
+  font-size: 22px;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+.main-event-over .event-content a:hover {
+  color: red;
+}
+
+.share {
+  margin-top: 10px;
+}
+.share .input-group {
+  border-style: inset;
+}
+.share .col-4 {
+  padding-top: 30px;
+}
+.share .col-4 h4 {
+  color: tomato;
+  font-size: 20px;
+}
+.share .col-4 p {
+  font-size: 12px;
+}
+.share .col-6 {
+  padding-top: 30px;
+}
+.share .col-6 input {
+  font-size: 12px;
+  opacity: 0.2;
+  height: 30px;
+  border-radius: 0;
+}
+.share .col-6 button {
+  background-color: tomato;
+  color: white;
+  height: 30px;
+  border-radius: 0;
+}
+
+.footer .container {
+  margin-top: 30px;
+  padding: 0;
+}
+.footer .container p {
+  font-size: 14px;
+}
+.footer .container a {
+  font-size: 12px;
+  color: black;
+  text-decoration: none;
+  display: block;
+}
+.footer .container .transaction {
+  font-size: 12px;
+}
+.footer .container .transaction img {
+  width: 40px;
+  height: 30px;
+}
+.footer .container .col-4 {
+  font-size: 12px;
+}
+.footer .container .col-4 img {
+  width: 30px;
+  height: 30px;
+}/*# sourceMappingURL=promotion.css.map */

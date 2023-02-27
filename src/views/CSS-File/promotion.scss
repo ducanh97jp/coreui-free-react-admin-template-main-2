@@ -1,0 +1,494 @@
+$font-size: 14px;
+$secondary-font-size: 16px;
+$font-bigsize: 20px;
+$font-smallsize: 12px;
+$color: tomato;
+$secondary-color: rgb(24, 136, 102);
+$secondary-color-dark: rgb(128, 128, 128, 0.7);
+$background-color: #f8f9fa;
+
+@mixin list {
+
+    list-style-type: none;
+    font-size: $secondary-font-size;
+    padding: 5px 10px;
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+@mixin product {
+    height: 50px;
+    background-color: white;
+    margin-bottom: 2px;
+    margin-left: 2px;
+
+    h6 {
+        font-size: $font-bigsize;
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+
+    .col-4 {
+        padding-top: 25px;
+        font-size: $font-smallsize;
+        text-align: right;
+        padding-right: 30px;
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: $secondary-color;
+            text-decoration: underline;
+        }
+    }
+}
+
+@mixin event {
+    background-color: rgb(240, 240, 240);
+
+    .event-img {
+        margin: 10px;
+        transition: 0.5s;
+        position: relative;
+        img {
+            width: 100%;
+        }
+        button {
+            position: absolute;
+            color: white;
+            background-color: $color;
+            font-size: $secondary-font-size;
+            padding: 5px 10px;
+            top:45%;
+            left: 45%;
+            border: none;
+            display: none;
+            .bi {
+                color: white;
+                font-size: 18px;
+                padding-right: 7px;
+            }
+        }
+        button:hover {
+            background-color: red;
+        }
+    }
+    .event-img:hover {
+        margin: 10px 0;
+        button {
+            display: block;
+        }
+    }
+    h5 {
+        color: red;
+        font-weight: bold;
+        padding: 10px 5px;
+    }
+    b {
+        color: $color;
+        padding: 10px 5px;
+        font-size: $font-size;
+    }
+    #time {
+        color: red;
+        .bi {
+            padding: 5px;
+            color: red;
+        }
+    }
+    #times {
+        color: red;
+        .bi {
+            padding: 5px;
+            color: red;
+        }
+    }
+    i {
+        color: $color;
+    }
+    a {
+        font-size: 22px;
+        font-weight: bold;
+        color: black;
+        text-decoration: none;
+    }
+    a:hover {
+        color: red;
+    }
+}
+
+body {
+    background-color: white;
+}
+
+.header-top {
+    width: 100%;
+    height: 40px;
+    background-color: rgb(231, 231, 231);
+    padding: 0;
+
+    .row {
+        margin: 0;
+    }
+
+    .head-top-left {
+        padding: 0;
+
+        ul {
+            display: flex;
+            align-items: flex-start;
+            padding: 0;
+
+            li {
+                list-style-type: none;
+                margin: 5px;
+                line-height: 30px;
+
+                a {
+                    text-decoration: none;
+                    padding: 7px;
+                    color: rgb(112, 112, 112);
+                    font-size: $font-smallsize;
+
+                    .bi {
+                        padding: 0 5px;
+                    }
+
+                    .bi-telephone-fill {
+                        background-color: red;
+                        color: white;
+                        padding: 1px;
+                        margin-left: 4px;
+                    }
+                }
+
+                b {
+                    font-size: $font-size;
+                    color: $color;
+                }
+            }
+
+            .list-follow {
+                a {
+                    background-color: dodgerblue;
+                    color: white;
+                    border-radius: 3px;
+                    padding: 3px;
+                }
+            }
+
+            li:hover {
+                background-color: white;
+            }
+        }
+    }
+
+    .head-top-right {
+        ul {
+            display: flex;
+            flex-direction: row-reverse;
+
+            li {
+                list-style-type: none;
+
+                margin: 5px;
+                padding: 2.5px;
+
+                a {
+                    text-decoration: none;
+                    padding: 7px;
+                    color: rgb(112, 112, 112);
+                    font-size: $font-smallsize;
+
+                    .bi {
+                        padding: 0 5px;
+                    }
+                }
+            }
+
+            li:hover {
+                background-color: white;
+            }
+        }
+    }
+}
+
+.header-bottom {
+    height: 70px;
+    background-color: whiter;
+
+    .container {
+        padding: 0;
+    }
+
+    .header-logo {
+        margin-top: 20px;
+        padding: 0;
+
+        img {
+            width: 80%;
+        }
+    }
+
+    .header__search {
+        position: relative;
+        margin-top: 15px;
+
+        .input-group {
+            height: 30px;
+
+            button {
+                background-color: white;
+                border: 1px solid rgb(170, 170, 170);
+            }
+
+            input {
+                font-size: $font-size;
+                border: 1px solid rgb(170, 170, 170);
+            }
+
+            .sum {
+                border-right: 3px solid $background-color;
+                width: 100px;
+                font-size: $font-size;
+            }
+
+            .search {
+                background-color: $color;
+                color: white;
+                border-color: $color;
+            }
+        }
+    }
+
+    .dropdown {
+        margin-top: 15px;
+
+        .btn {
+            background-color: white;
+            color: rgb(112, 112, 112);
+            border: none;
+            font-size: $secondary-font-size;
+
+            .bi {
+                padding: 0 7px;
+            }
+        }
+
+        .btn:hover {
+            background-color: rgb(220, 220, 220);
+        }
+
+        ul {
+            padding: 0;
+
+            li {
+                border: 1px solid rgb(231, 231, 231);
+            }
+        }
+    }
+
+    .header__shop {
+        margin-top: 20px;
+        color: rgb(112, 112, 112);
+        font-size: $secondary-font-size;
+        text-align: right;
+
+        .bi {
+            padding: 0 7px;
+        }
+    }
+}
+
+.nav {
+    .menu {
+        border: 2px solid rgb(220, 220, 220);
+        position: relative;
+        display: inline-block;
+        padding: 5px 10px;
+
+        .menu-link {
+            font-size: $secondary-font-size;
+            position: relative;
+            .bi {
+                padding: 0 10px;
+            }
+            .bi-list {
+            font-weight: bold;
+            font-size: $font-bigsize;
+            }
+        }
+        
+        .nav-menu {
+            @include list();
+            padding: 0;
+            position: absolute;
+            border: 2px solid rgb(220, 220, 220);
+            top:40px;
+            left: -2px;
+            width: 248px;
+            background-color: white;
+            z-index: 1;
+            display: none;
+
+            .menu-bottom {
+                padding: 7px ;
+                padding-left: 15px;
+                position: relative;
+            }
+            .menu-bottom:hover {
+                .menu-bottom-link {
+                    color: $color;
+                }
+                .menu-secondary {
+                    display: block;
+                }
+            }
+
+            .menu-secondary {
+                @include list();
+                width: 200px;
+                position: absolute;
+                background-color: white;
+                top:0;
+                left: 244px;
+                border: 2px solid rgb(220, 220, 220);
+                display: none;
+
+                li {
+                    padding: 7px;
+                }
+                li:hover {
+                    a {
+                        color: $color;
+                    }
+                }
+
+            }
+
+        }
+        .nav-menu:hover {
+            color: $color;
+        }
+    }
+    .menu:hover {
+        .menu-link {
+            color: $color;
+        }
+        .nav-menu {
+                display: block;
+        }
+        
+    }
+}
+.main {
+    .container {
+        h1 {
+            color: white;
+            background-color: $color;
+            border-radius: 20px;
+            padding: 5px 40px;
+            display: inline-block;
+            font-size: 40px;
+            font-weight: bold;
+        }
+        h4 {
+            color: white;
+            background-color: $color;
+            border-radius: 20px;
+            padding: 5px 40px;
+            display: inline-block;
+            font-size: 22px;
+            font-weight: bold;
+            margin: 30px 0;
+        }
+    }
+}
+.main-event-today {
+    @include event();
+}
+
+.main-event-now {
+    width: 50%;
+    overflow: hidden;
+    @include event();
+}
+
+.main-event-over {
+    .over-left {
+        padding-left: 0;
+    }
+    .over-right {
+        padding-right: 0;
+    }
+    .event-content {
+        @include event();
+    }
+}
+
+.share {
+    margin-top: 10px;
+    .input-group {
+        border-style: inset;
+    }
+    .col-4 {
+        padding-top: 30px;
+        h4 {
+            color: $color;
+            font-size: $font-bigsize;
+        }
+        p {
+            font-size: $font-smallsize;
+        }
+    }
+    .col-6 {
+        padding-top: 30px;
+        input {
+            font-size: $font-smallsize;
+            opacity: 0.2;
+            height: 30px;
+            border-radius: 0;
+            
+        }
+        button {
+            background-color: $color;
+            color: white;
+            height: 30px;
+            border-radius: 0;
+        }
+    }
+}
+.footer .container{
+    margin-top: 30px;
+    padding: 0;
+    
+    p {
+        font-size: $font-size;
+    }
+    a {
+        font-size: $font-smallsize;
+        color: black;
+        text-decoration: none;
+        display: block;
+    }
+    .transaction {
+        font-size: $font-smallsize;
+        img {
+            width: 40px;
+            height: 30px;
+        }
+    }
+    .col-4 {
+        font-size: $font-smallsize;
+        img {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}

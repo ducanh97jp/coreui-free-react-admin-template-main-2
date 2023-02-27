@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuộc Xâm Lăng Của Bé Mực - Tập 8</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS-File/detail.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+        crossorigin="anonymous"></script>
+        <script src="../js/detail.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-top">
+            <div class="row">
+                <div class="col-5">
+                    <ul>
+                        <li>
+                            <a href="#"><i class="bi bi-info-circle"></i>Trợ giúp</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="bi bi-newspaper"></i>Tin tức</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="bi bi-tags-fill"></i>Khuyến mại</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-7">
+                    <ul>
+                        <li>
+                            <a href="#"><i class="bi bi-person-check"></i>Đăng ký</a>
+                        </li>
+                        <li>
+                            <a href="#"> <i class="bi bi-box-arrow-in-right"></i>Đăng nhập</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="bi bi-boxes"></i>Kiểm tra đơn hàng</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="bi bi-gift"></i>Ưu đãi & tiện ích</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="header-logo col-2">
+                        <img src="../image/logo-new.png" alt="">
+                    </div>
+                    <div class="header__search col-6">
+                        <div class="input-group border border-0">
+                            <button class="input-group-text sum">Tất cả</button>
+                            <input type="text" class="form-control" placeholder="Bạn cần tìm gì?"
+                                aria-label="Dollar amount (with dot and two decimal places)">
+                            <button class="input-group-text"><i class="bi bi-search"></i></button>
+                        </div>
+                    </div>
+                    <div class="header__phone-number col-2">
+                        <div class="row">
+                            <div class="col-3">
+                                <i class="bi bi-headset"></i>
+                            </div>
+                            <div class="col-9">
+                                <h6>0123 456 789</h6>
+                                <p>Hot line</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header__shop col-2 ">
+                        <div class="row">
+                            <div class="col-3"><i class="bi bi-cart"></i></div>
+                            <div class="col-9">
+                                <p>Giỏ hàng (0)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="nav">
+        <div class="container p-0">
+            <ul class="row p-0">
+                <li class="col-3">
+                    <a class="menu-link" href="#">
+                        <div class="row">
+                            <div class="col-2">
+                                <i class="bi bi-list"></i>
+                            </div>
+                            <div class="col-8"> Danh mục sản phẩm</div>
+                            <div class="col-2 arrow">
+                                <i class="bi bi-caret-down-fill"></i>
+                            </div>
+                        </div>
+                    </a>
+                    <ul class="nav-menu">
+                        <li class="menu-bottom"><a href="#" class="menu-bottom-link"> Truyện tranh hot</a></li>
+                        <li class="menu-bottom"><a href="#" class="menu-bottom-link">Truyện tranh đồng giá</a></li>
+                        <li class="menu-bottom">
+                            <a href="#" class="menu-bottom-link">Truyện tranh theo chủ đề</a>
+                            <ul class="menu-secondary">
+                                <li><a href="#">Chinh thám</a></li>
+                                <li><a href="#">Thám hiểm</a></li>
+                                <li><a href="#">Ma thuật</a></li>
+                                <li><a href="#">Đô thị</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-bottom">
+                            <a href="#" class="menu-bottom-link">Truyện tranh theo năm XB</a>
+                            <ul class="menu-secondary">
+                                <li><a href="#">Năm 2018</a></li>
+                                <li><a href="#">Năm 2019</a></li>
+                                <li><a href="#">Năm 2020</a></li>
+                                <li><a href="#">Năm 2021</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-bottom">
+                            <a href="#" class="menu-bottom-link">Thuyện tranh theo quốc gia</a>
+                            <ul class="menu-secondary">
+                                <li><a href="#">Việt Nam</a></li>
+                                <li><a href="#">Trung Quốc</a></li>
+                                <li><a href="#">Nhật bản</a></li>
+                                <li><a href="#">Mỹ</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-bottom">
+                            <a href="#" class="menu-bottom-link">Tác giả nổi tiếng</a>
+                            <ul class="menu-secondary">
+                                <li><a href="#">Eiichiro Oda</a></li>
+                                <li><a href="#">Eiichiro Oda</a></li>
+                                <li><a href="#">Fujiko Fujio</a></li>
+                                <li><a href="#">Masashi Kishimoto</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="col-4">
+                    <a href="#" class="menu-link">
+                        <img src="../image/khuyen-mai-2.png" alt="">
+                        Giảm thêm 2%
+                    </a>
+                </li>
+                <li class="col-5">
+                    <a href="promotion.html" class="menu-link">
+                        <img src="../image/khuyen-mai-hot.jpeg" alt="">
+                        Chương Trình khuyến Mại
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="secondary-nav">
+        <div class="container">
+            <div>
+                <a href="#" class="nav-link">Trang chủ</a>
+                <span>/</span>
+                <a href="#" class="nav-link">Truyện tranh Manga, Manhwa, Manhua khác</a>
+                <span>/</span>
+                <a href="#" class="story-name">Cuộc Xâm Lăng Của Bé Mực - Tập 8 (Tái Bản 2021)</a>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="main-detail">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="main-detail__img">
+                            <img src="../image/cuoc-xam-lang-cua-be-muc-tap-8_52094_1.jpeg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-8 main-detail__body">
+                        <div class="row">
+                            <div class="col-8">
+                                <h3 class="body-head">Cuộc Xâm Lăng Của Bé Mực - Tập 8 (Tái Bản 2021)</h3>
+                                <p><a href="#">Anbe Masahiro</a> (Tác giả)</p>
+                                <p><a href="#">Hinastu</a> (Dịch giả)</p>
+                                <h4>48.000 đ</h4>
+                                <p class="status">Tình trạng: <span>Còn hàng</span></p>
+                                <small>Tags: <a href="#">cuoc-xam-luoc-cua-be-muc</a> <a href="#">Truyện tranh Manga,
+                                        Manhwa, Manhua
+                                        khác</a></small>
+                                <div class="number input-group">
+                                    <label>Số Lượng:&ensp;&ensp;</label>
+                                    <button onclick="reduce()">-</button>
+                                    <input id="amount" type="text" value="1">
+                                    <button onclick="augment()">+</button>
+                                </div>
+                                <div class="button-buy">
+                                    <button class="button-buy__in-cart">THÊM VÀO GIỎ HÀNG</button>
+                                    <button class="button-buy__buy">MUA NGAY</button>
+                                </div>
+                                <p class="body-text">Gọi đặt hàng: <a href="#">(028) 123 446</a> hoặc <a href="#">0234
+                                        543 433</a></p>
+                                <p class="body-text">Thông tin & Khuyến mãi</p>
+                                <p class="body-text">Đổi trả trong vòng 7 ngày</p>
+                                <p class="body-text note">Sử dụng mỗi <span>3.000 BBxu</span> để được giảm 10.000đ. <a
+                                        href="#">Làm sao để lấy
+                                        BBxu?</a></p>
+                                <p class="body-text note">Freeship nội thành Sài Gòn từ 150.000đ<sup>*</sup>. Chi tiết
+                                    tại <a href="#">đây</a>
+                                </p>
+                                <p class="body-text">Freeship taonf quốc từ 250.000đ</p>
+                            </div>
+                            <div class="col-4">
+                                <div class="secondary">
+                                    <ul>
+                                        <li><i class="bi bi-heart"></i>Thêm vào yêu thích</li>
+                                        <li><i class="bi bi-person-check"></i>Ưu đãi Khách hàng thân thiết</li>
+                                        <li><i class="bi bi-truck"></i>Để được miễn phí vận chuyển</li>
+                                    </ul>
+                                    <p>Share để nhận BBxu – Mua hàng 0đ</p>
+                                    <div class="secondary-button">
+                                        <button class="button-like"><i class="bi bi-hand-thumbs-up"></i><b>Thích</b>
+                                            0</button>
+                                        <button class="button-twitter"><i
+                                                class="bi bi-twitter"></i><b>Tweet</b></button>
+                                        <button class="button-save"><i class="bi bi-bullseye"></i><b>Save</b></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-same-kind">
+            <div class="container">
+                <div class="row">
+                    <a href="#" class="col-4">Sản phẩm cùng bộ</a>
+                    <p class="col-6">Trọn bộ 14 sản phẩm / Còn 3 sản phẩm có hàng / 135,000 <sub>đ</sub></p>
+                    <a href="#" class="col-2">MUA NGAY</a>
+                </div>
+            </div>
+        </div>
+        <div class="main-same-kind-list">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="card">
+                            <img src="../image/cuoc-xam-lang-cua-be-muc-tap-8_52094_1.jpeg" class="card-img-top"
+                                alt="...">
+                            <div class="card-body">
+                                <a href="#" class="card-text">Cuộc Xâm Lăng Của Bé Mực - Tập 8(Tái Bản 2021)</a>
+                                <a href="#" class="bro">Anbe Masashiro</a>
+                                <p class="card-money col-5">48.000<sub>đ</sub></p>
+                            </div>
+                            <div class="card-show-right">
+                                <b class="show-head">Cuộc Xâm Lăng Của Bé Mực - Tập 8 (Tái Bản 2021)</b>
+                                <a href="#" class="show-author">Anbe Masahiro</a>
+                                <p class="show-text">Cuộc Xâm Lăng Của Bé Mực - Tập 8 Thật ra câu chuyện này tôi đã suy nghĩ từ trước rồi. 
+                                    Nhưng tôi chưa tập hợp những phác thảo ý tưởng thô và mất thời gian cho phần bối cảnh nên đã hoãn lại mãi. 
+                                    Rất may là cuối cùng cũng được phát hành. Thật khó để sử dụng nhân vật mới "ra lò", nhưng tôi nghĩ từ giờ tôi ...</p>
+                                <a href="#" class="show-text-more">Xem thêm</a>
+                                <b class="show-money">48.000<sub>đ</sub></b>
+                                <button class="show-in-shop">THÊM VÀO GIỎ HÀNG</button>
+                                <button class="show-buy">MUA NGAY</button>
+                                <button class="show-like"><i class="bi bi-heart-fill"></i>Thêm vào yêu thích</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card">
+                            <img src="../image/cuoc-xam-lang-cua-be-muc-tap-7_52093_1.jpeg" class="card-img-top"
+                                alt="...">
+                            <div class="card-body">
+                                <a href="#" class="card-text">Cuộc Xâm Lăng Của Bé Mực - Tập 7(Tái Bản 2021)</a>
+                                <a href="#" class="bro">Anbe Masashiro</a>
+                                <p class="card-money col-5">48.000<sub>đ</sub></p>
+                            </div>
+                            <div class="card-show-right">
+                                <b class="show-head">Cuộc Xâm Lăng Của Bé Mực - Tập 8 (Tái Bản 2021)</b>
+                                <a href="#" class="show-author">Anbe Masahiro</a>
+                                <p class="show-text">Cuộc Xâm Lăng Của Bé Mực - Tập 8 Thật ra câu chuyện này tôi đã suy nghĩ từ trước rồi. 
+                                    Nhưng tôi chưa tập hợp những phác thảo ý tưởng thô và mất thời gian cho phần bối cảnh nên đã hoãn lại mãi. 
+                                    Rất may là cuối cùng cũng được phát hành. Thật khó để sử dụng nhân vật mới "ra lò", nhưng tôi nghĩ từ giờ tôi ...</p>
+                                <a href="#" class="show-text-more">Xem thêm</a>
+                                <b class="show-money">48.000<sub>đ</sub></b>
+                                <button class="show-in-shop">THÊM VÀO GIỎ HÀNG</button>
+                                <button class="show-buy">MUA NGAY</button>
+                                <button class="show-like"><i class="bi bi-heart-fill"></i>Thêm vào yêu thích</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card">
+                            <img src="../image/cuoc-xam-lang-cua-be-muc-tap-7_52093_1.jpeg" class="card-img-top"
+                                alt="...">
+                            <div class="card-body">
+                                <a href="#" class="card-text">Cuộc Xâm Lăng Của Bé Mực - Tập 2(Tái Bản 2021)</a>
+                                <a href="#" class="bro">Anbe Masashiro</a>
+                                <p class="card-money col-5">39.000<sub>đ</sub></p>
+                            </div>
+                            <div class="card-show-right">
+                                <b class="show-head">Cuộc Xâm Lăng Của Bé Mực - Tập 8 (Tái Bản 2021)</b>
+                                <a href="#" class="show-author">Anbe Masahiro</a>
+                                <p class="show-text">Cuộc Xâm Lăng Của Bé Mực - Tập 8 Thật ra câu chuyện này tôi đã suy nghĩ từ trước rồi. 
+                                    Nhưng tôi chưa tập hợp những phác thảo ý tưởng thô và mất thời gian cho phần bối cảnh nên đã hoãn lại mãi. 
+                                    Rất may là cuối cùng cũng được phát hành. Thật khó để sử dụng nhân vật mới "ra lò", nhưng tôi nghĩ từ giờ tôi ...</p>
+                                <a href="#" class="show-text-more">Xem thêm</a>
+                                <b class="show-money">48.000<sub>đ</sub></b>
+                                <button class="show-in-shop">THÊM VÀO GIỎ HÀNG</button>
+                                <button class="show-buy">MUA NGAY</button>
+                                <button class="show-like"><i class="bi bi-heart-fill"></i>Thêm vào yêu thích</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card">
+                            <img src="../image/cuoc-xam-lang-cua-be-muc-tap-8_52094_1.jpeg" class="card-img-top"
+                                alt="...">
+                            <div class="card-body">
+                                <a href="#" class="card-text">Cuộc Xâm Lăng Của Bé Mực - Tập 1(Tái Bản 2021)</a>
+                                <a href="#" class="bro">Anbe Masashiro</a>
+                                <p class="card-money col-5">48.000<sub>đ</sub></p>
+                            </div>
+                            <div class="card-show-left">
+                                <b class="show-head">Cuộc Xâm Lăng Của Bé Mực - Tập 8 (Tái Bản 2021)</b>
+                                <a href="#" class="show-author">Anbe Masahiro</a>
+                                <p class="show-text">Cuộc Xâm Lăng Của Bé Mực - Tập 8 Thật ra câu chuyện này tôi đã suy nghĩ từ trước rồi. 
+                                    Nhưng tôi chưa tập hợp những phác thảo ý tưởng thô và mất thời gian cho phần bối cảnh nên đã hoãn lại mãi. 
+                                    Rất may là cuối cùng cũng được phát hành. Thật khó để sử dụng nhân vật mới "ra lò", nhưng tôi nghĩ từ giờ tôi ...</p>
+                                <a href="#" class="show-text-more">Xem thêm</a>
+                                <b class="show-money">48.000<sub>đ</sub></b>
+                                <button class="show-in-shop">THÊM VÀO GIỎ HÀNG</button>
+                                <button class="show-buy">MUA NGAY</button>
+                                <button class="show-like"><i class="bi bi-heart-fill"></i>Thêm vào yêu thích</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="main-information">
+            <div class="container">
+                <div class="row">
+                    <div class="col-9">
+                        <div class="information-table">
+                            <h3>THÔNG TIN CHI TIẾT</h3>
+                            <div class="table">
+                                <table>
+                                    <tr>
+                                        <td>Nhà xuất bản: <a href="#"> NXB Phụ Nữ Việt Nam</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ngày xuất bản: 05/11/2021</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nhà phát hành: <a href="#"> SkyBooks</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kích thước: đóng hàng (RxD) 11.3 x 17.6 cm</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Số trang: 200 trang</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Trọng lượng: 400 gram</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="information-introduce">
+                            <h3>Giới thiệu sản phẩm</h3>
+                            <h5>Cuộc Xâm Lăng Của Bé Mực - Tập 8</h5>
+                            <p>Thật ra câu chuyện này tôi đã suy nghĩ từ trước rồi.</p>
+                            <p>Nhưng tôi chưa tập hợp những phác thảo ý tưởng thô và mất thời gian cho phần bối cảnh nên
+                                đã hoãn lại mãi.
+                                Rất may là cuối cùng cũng được phát hành. Thật khó để sử dụng nhân vật mới "ra lò",
+                                nhưng tôi nghĩ từ giờ tôi sẽ mở rộng phạm vi câu chuyện hơn nữa.</p>
+                            <br>
+                            <p>Câu chuyện này là về nhật kí xâm lược đầy tình yêu và hòa bình của cô bé mực,
+                                muốn chinh phục loài người - những kẻ đã làm ô nhiễm biển.</p>
+                            <p class="introduce-link"><a href="#">Mua sách online</a> tại Bookbuy.vn và nhận nhiều ưu
+                                đãi.</p>
+                            <div class="button"><button>Mua ngay</button></div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="main-introduce">
+                            <h4><a href="#">CÙNG TÁC GIẢ</a></h4>
+                            <div>
+                                <div class="card">
+                                    <img src="../image/cuoc-xam-lang-cua-be-muc-tap-7_52093_1.jpeg" class="card-img-top"
+                                        alt="...">
+                                    <div class="card-body">
+                                        <a href="#" class="card-text">Cuộc Xâm Lăng Của Bé Mực - Tập 7(Tái Bản 2021)</a>
+                                        <a href="#" class="bro">Anbe Masashiro</a>
+                                        <p class="card-money col-5">48.000<sub>đ</sub></p>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="../image/cuoc-xam-lang-cua-be-muc-tap-7_52093_1.jpeg" class="card-img-top"
+                                        alt="...">
+                                    <div class="card-body">
+                                        <a href="#" class="card-text">Cuộc Xâm Lăng Của Bé Mực - Tập 2(Tái Bản 2021)</a>
+                                        <a href="#" class="bro">Anbe Masashiro</a>
+                                        <p class="card-money col-5">39.000<sub>đ</sub></p>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="../image/cuoc-xam-lang-cua-be-muc-tap-8_52094_1.jpeg" class="card-img-top"
+                                        alt="...">
+                                    <div class="card-body">
+                                        <a href="#" class="card-text">Cuộc Xâm Lăng Của Bé Mực - Tập 1(Tái Bản 2021)</a>
+                                        <a href="#" class="bro">Anbe Masashiro</a>
+                                        <p class="card-money col-5">48.000<sub>đ</sub></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="link">
+                                <a href="#">Xem tất cả </a>
+                                <span><i class="bi bi-arrow-right-circle-fill"></i></span>
+                            </div>
+                            <h4><a href="#">SẢN PHẨM BÁN CHẠY</a></h4>
+                            <div>
+                                <div class="card">
+                                    <img src="../image/hoc-sinh-chan-kinh-tap-23-bang-long-di-em-phan-1-_65613_1.jpeg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <a href="#" class="card-text">Học Sinh Chân Kinh - Tập 23: Bằng Lòng Đi Em
+                                            (Phần 1)</a>
+                                        <a href="#" class="bro">B.R.O</a>
+                                        <div class="row">
+                                            <p class="card-money col-3">29.500<sub>đ</sub></p>
+                                            <p class="reverse-money col-3"><del>35.000<sub>đ</sub></del></p>
+                                            <p class="sale-money col-2">-15%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="../image/hoc-sinh-chan-kinh-tap-22-trung-doi-be-ta-phan-2-_59677_1.jpeg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <a href="#" class="card-text">Học Sinh Chân Kinh - Tập 22: Trung Đội Bê Ta
+                                            (Phần 1)</a>
+                                        <a href="#" class="bro">B.R.O</a>
+                                        <div class="row">
+                                            <p class="card-money col-3">29.500<sub>đ</sub></p>
+                                            <p class="reverse-money col-3"><del>35.000<sub>đ</sub></del></p>
+                                            <p class="sale-money col-2">-15%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="../image/hoc-sinh-chan-kinh-tap-21-trung-doi-be-ta_52791_2.jpeg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <a href="#" class="card-text">Học Sinh Chân Kinh - Tập 21: Trung Đội Bê Ta
+                                            (Phần 1)</a>
+                                        <a href="#" class="bro">B.R.O</a>
+                                        <div class="row">
+                                            <p class="card-money col-3">29.500<sub>đ</sub></p>
+                                            <p class="reverse-money col-3"><del>35.000<sub>đ</sub></del></p>
+                                            <p class="sale-money col-2">-15%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="../image/hoc-sinh-chan-kinh-tap-17-gieo-gi-gat-nay_31594_1.jpeg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <a href="#" class="card-text">Học Sinh Chân Kinh - Tập 27: Gieo Gì Gặt Nấy
+                                            (Phần 1)</a>
+                                        <a href="#" class="bro">B.R.O</a>
+                                        <div class="row">
+                                            <p class="card-money col-3">29.500<sub>đ</sub></p>
+                                            <p class="reverse-money col-3"><del>35.000<sub>đ</sub></del></p>
+                                            <p class="sale-money col-2">-15%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="../image/hoc-sinh-chan-kinh-tap-3-got-hong-len-ngoi-(tang-kem-phong-an-b-r-o)_21659_19597.jpeg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <a href="#" class="card-text">Học Sinh Chân Kinh - Tập 3: Gót Hồng Lên Ngôi
+                                            (Phần 1)</a>
+                                        <a href="#" class="bro">B.R.O</a>
+                                        <div class="row">
+                                            <p class="card-money col-3">29.500<sub>đ</sub></p>
+                                            <p class="reverse-money col-3"><del>35.000<sub>đ</sub></del></p>
+                                            <p class="sale-money col-2">-15%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-together">
+            <div class="container">
+                <div class="main-together-head">
+                    <a href="#" class="together-link">Sản phẩm cùng loại </a>
+                    <span>/</span>
+                    <a href="#" class="together-link-looked">Đã xem</a>
+                </div>
+                <hr>
+                <div id="carouselExampleControls" class="carousel slide" data-bs-touch="false">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="carousel-body">
+                                <div class="carousel-body-item">
+                                    <div class="card">
+                                        <img src="../image/nhat-quy-nhi-ma-thu-ba-van-la-takagi-tap-9_120028_1.jpeg"
+                                            class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <a href="#" class="card-text">Nhất Quỷ Nhì Ma, Thứ Ba (Vẫn Là) Takagi - Tập 9</a>
+                                            <a href="#" class="bro">Soichiro Yamamoto</a>
+                                            <p class="card-money col-5">30.000<sub>đ</sub></p>
+                                        </div>
+                                        <div class="card-show-right">
+                                            <b class="show-head">Cuộc Xâm Lăng Của Bé Mực - Tập 8 (Tái Bản 2021)</b>
+                                            <a href="#" class="show-author">Anbe Masahiro</a>
+                                            <p class="show-text">Cuộc Xâm Lăng Của Bé Mực - Tập 8 Thật ra câu chuyện này tôi đã suy nghĩ từ trước rồi. 
+                                                Nhưng tôi chưa tập hợp những phác thảo ý tưởng thô và mất thời gian cho phần bối cảnh nên đã hoãn lại mãi. 
+                                                Rất may là cuối cùng cũng được phát hành. Thật khó để sử dụng nhân vật mới "ra lò", nhưng tôi nghĩ từ giờ tôi ...</p>
+                                            <a href="#" class="show-text-more">Xem thêm</a>
+                                            <b class="show-money">48.000<sub>đ</sub></b>
+                                            <button class="show-in-shop">THÊM VÀO GIỎ HÀNG</button>
+                                            <button class="show-buy">MUA NGAY</button>
+                                            <button class="show-like"><i class="bi bi-heart-fill"></i>Thêm vào yêu thích</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-body-item">
+                                    <div class="card">
+                                        <img src="../image/tanaka-luc-nao-cung-vat-vo-tap-3_120023_1.jpeg"
+                                            class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <a href="#" class="card-text">Tanaka Lúc Nào Cũng Vật Vờ - Tập 3</a>
+                                            <a href="#" class="bro">Nozomi Uda</a>
+                                            <p class="card-money col-5">38.000<sub>đ</sub></p>
+                                        </div>
+                                        <div class="card-show-right">
+                                            <b class="show-head">Cuộc Xâm Lăng Của Bé Mực - Tập 8 (Tái Bản 2021)</b>
+                                            <a href="#" class="show-author">Anbe Masahiro</a>
+                                            <p class="show-text">Cuộc Xâm Lăng Của Bé Mực - Tập 8 Thật ra câu chuyện này tôi đã suy nghĩ từ trước rồi. 
+                                                Nhưng tôi chưa tập hợp những phác thảo ý tưởng thô và mất thời gian cho phần bối cảnh nên đã hoãn lại mãi. 
+                                                Rất may là cuối cùng cũng được phát hành. Thật khó để sử dụng nhân vật mới "ra lò", nhưng tôi nghĩ từ giờ tôi ...</p>
+                                            <a href="#" class="show-text-more">Xem thêm</a>
+                                            <b class="show-money">48.000<sub>đ</sub></b>
+                                            <button class="show-in-shop">THÊM VÀO GIỎ HÀNG</button>
+                                            <button class="show-buy">MUA NGAY</button>
+                                            <button class="show-like"><i class="bi bi-heart-fill"></i>Thêm vào yêu thích</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-body-item">
+                                    <div class="card">
+                                        <img src="../image/kaguya-sama-cuoc-chien-to-tinh-tap-2_120022_1.jpeg"
+                                            class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <a href="#" class="card-text">Kaguya-Sâm: Cuộc Chiến Tỏ Tình - Tập 2</a>
+                                            <a href="#" class="bro">Aka Akasaka</a>
+                                            <p class="card-money col-5">42.000<sub>đ</sub></p>
+                                        </div>
+                                        <div class="card-show-right">
+                                            <b class="show-head">Cuộc Xâm Lăng Của Bé Mực - Tập 8 (Tái Bản 2021)</b>
+                                            <a href="#" class="show-author">Anbe Masahiro</a>
+                                            <p class="show-text">Cuộc Xâm Lăng Của Bé Mực - Tập 8 Thật ra câu chuyện này tôi đã suy nghĩ từ trước rồi. 
+                                                Nhưng tôi chưa tập hợp những phác thảo ý tưởng thô và mất thời gian cho phần bối cảnh nên đã hoãn lại mãi. 
+                                                Rất may là cuối cùng cũng được phát hành. Thật khó để sử dụng nhân vật mới "ra lò", nhưng tôi nghĩ từ giờ tôi ...</p>
+                                            <a href="#" class="show-text-more">Xem thêm</a>
+                                            <b class="show-money">48.000<sub>đ</sub></b>
+                                            <button class="show-in-shop">THÊM VÀO GIỎ HÀNG</button>
+                                            <button class="show-buy">MUA NGAY</button>
+                                            <button class="show-like"><i class="bi bi-heart-fill"></i>Thêm vào yêu thích</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-body-item">
+                                    <div class="card">
+                                        <img src="../image/ninja-rantaro-tap-62_120021_1.jpeg"
+                                            class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <a href="#" class="card-text">Ninja Rantaro - Tập 62
+                                            </a>
+                                            <a href="#" class="bro">Soubee Amako</a>
+                                            <p class="card-money col-5">40.000<sub>đ</sub></p>
+                                        </div>
+                                        <div class="card-show-right">
+                                            <b class="show-head">Cuộc Xâm Lăng Của Bé Mực - Tập 8 (Tái Bản 2021)</b>
+                                            <a href="#" class="show-author">Anbe Masahiro</a>
+                                            <p class="show-text">Cuộc Xâm Lăng Của Bé Mực - Tập 8 Thật ra câu chuyện này tôi đã suy nghĩ từ trước rồi. 
+                                                Nhưng tôi chưa tập hợp những phác thảo ý tưởng thô và mất thời gian cho phần bối cảnh nên đã hoãn lại mãi. 
+                                                Rất may là cuối cùng cũng được phát hành. Thật khó để sử dụng nhân vật mới "ra lò", nhưng tôi nghĩ từ giờ tôi ...</p>
+                                            <a href="#" class="show-text-more">Xem thêm</a>
+                                            <b class="show-money">48.000<sub>đ</sub></b>
+                                            <button class="show-in-shop">THÊM VÀO GIỎ HÀNG</button>
+                                            <button class="show-buy">MUA NGAY</button>
+                                            <button class="show-like"><i class="bi bi-heart-fill"></i>Thêm vào yêu thích</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-body-item">
+                                    <div class="card">
+                                        <img src="../image/co-ban-toi-tham-thich-lai-quen-mang-kinh-roi-tap-5_120020_1.jpeg"
+                                            class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <a href="#" class="card-text">Cô Bạn Tôi Thầm Thích lại Quên Mang Kính Rồi - Tập 5
+                                            </a>
+                                            <a href="#" class="bro">Koume Fujichika</a>
+                                            <p class="card-money col-5">38.000<sub>đ</sub></p>
+                                        </div>
+                                        <div class="card-show-left">
+                                            <b class="show-head">Cuộc Xâm Lăng Của Bé Mực - Tập 8 (Tái Bản 2021)</b>
+                                            <a href="#" class="show-author">Anbe Masahiro</a>
+                                            <p class="show-text">Cuộc Xâm Lăng Của Bé Mực - Tập 8 Thật ra câu chuyện này tôi đã suy nghĩ từ trước rồi. 
+                                                Nhưng tôi chưa tập hợp những phác thảo ý tưởng thô và mất thời gian cho phần bối cảnh nên đã hoãn lại mãi. 
+                                                Rất may là cuối cùng cũng được phát hành. Thật khó để sử dụng nhân vật mới "ra lò", nhưng tôi nghĩ từ giờ tôi ...</p>
+                                            <a href="#" class="show-text-more">Xem thêm</a>
+                                            <b class="show-money">48.000<sub>đ</sub></b>
+                                            <button class="show-in-shop">THÊM VÀO GIỎ HÀNG</button>
+                                            <button class="show-buy">MUA NGAY</button>
+                                            <button class="show-like"><i class="bi bi-heart-fill"></i>Thêm vào yêu thích</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carousel-body">
+                                <div class="carousel-body-item">
+                                    <div class="card">
+                                        <img src="../image/dragon-quest-dau-an-roto-perfect-edition-tap-10_120018_1.jpeg"
+                                            class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <a href="#" class="card-text">Dragon Quest - Dấu Ấn Roto - Perfect Edition Tập 10
+                                            </a>
+                                            <a href="#" class="bro">Kamui Fujiwara</a>
+                                            <p class="card-money col-5">75.000<sub>đ</sub></p>
+                                        </div>
+                                        <div class="card-show-right">
+                                            <b class="show-head">Cuộc Xâm Lăng Của Bé Mực - Tập 8 (Tái Bản 2021)</b>
+                                            <a href="#" class="show-author">Anbe Masahiro</a>
+                                            <p class="show-text">Cuộc Xâm Lăng Của Bé Mực - Tập 8 Thật ra câu chuyện này tôi đã suy nghĩ từ trước rồi. 
+                                                Nhưng tôi chưa tập hợp những phác thảo ý tưởng thô và mất thời gian cho phần bối cảnh nên đã hoãn lại mãi. 
+                                                Rất may là cuối cùng cũng được phát hành. Thật khó để sử dụng nhân vật mới "ra lò", nhưng tôi nghĩ từ giờ tôi ...</p>
+                                            <a href="#" class="show-text-more">Xem thêm</a>
+                                            <b class="show-money">48.000<sub>đ</sub></b>
+                                            <button class="show-in-shop">THÊM VÀO GIỎ HÀNG</button>
+                                            <button class="show-buy">MUA NGAY</button>
+                                            <button class="show-like"><i class="bi bi-heart-fill"></i>Thêm vào yêu thích</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-body-item">
+                                    <div class="card">
+                                        <img src="../image/dragon-quest-dau-an-roto-perfect-edition-tap-9_120017_1.jpeg"
+                                            class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <a href="#" class="card-text">Dragon Quest - Dấu Ấn Roto - Perfect Edition Tập 9
+                                            </a>
+                                            <a href="#" class="bro">Kamui Fujiwara</a>
+                                            <p class="card-money col-5">75.000<sub>đ</sub></p>
+                                        </div>
+                                        <div class="card-show-right">
+                                            <b class="show-head">Cuộc Xâm Lăng Của Bé Mực - Tập 8 (Tái Bản 2021)</b>
+                                            <a href="#" class="show-author">Anbe Masahiro</a>
+                                            <p class="show-text">Cuộc Xâm Lăng Của Bé Mực - Tập 8 Thật ra câu chuyện này tôi đã suy nghĩ từ trước rồi. 
+                                                Nhưng tôi chưa tập hợp những phác thảo ý tưởng thô và mất thời gian cho phần bối cảnh nên đã hoãn lại mãi. 
+                                                Rất may là cuối cùng cũng được phát hành. Thật khó để sử dụng nhân vật mới "ra lò", nhưng tôi nghĩ từ giờ tôi ...</p>
+                                            <a href="#" class="show-text-more">Xem thêm</a>
+                                            <b class="show-money">48.000<sub>đ</sub></b>
+                                            <button class="show-in-shop">THÊM VÀO GIỎ HÀNG</button>
+                                            <button class="show-buy">MUA NGAY</button>
+                                            <button class="show-like"><i class="bi bi-heart-fill"></i>Thêm vào yêu thích</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-body-item">
+                                    <div class="card">
+                                        <img src="../image/blue-flag-tap-3_120016_1.jpeg"
+                                            class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <a href="#" class="card-text">Blue Flag - Tập 3</a>
+                                            <a href="#" class="bro">Kaito</a>
+                                            <p class="card-money col-5">45.000<sub>đ</sub></p>
+                                        </div>
+                                        <div class="card-show-right">
+                                            <b class="show-head">Cuộc Xâm Lăng Của Bé Mực - Tập 8 (Tái Bản 2021)</b>
+                                            <a href="#" class="show-author">Anbe Masahiro</a>
+                                            <p class="show-text">Cuộc Xâm Lăng Của Bé Mực - Tập 8 Thật ra câu chuyện này tôi đã suy nghĩ từ trước rồi. 
+                                                Nhưng tôi chưa tập hợp những phác thảo ý tưởng thô và mất thời gian cho phần bối cảnh nên đã hoãn lại mãi. 
+                                                Rất may là cuối cùng cũng được phát hành. Thật khó để sử dụng nhân vật mới "ra lò", nhưng tôi nghĩ từ giờ tôi ...</p>
+                                            <a href="#" class="show-text-more">Xem thêm</a>
+                                            <b class="show-money">48.000<sub>đ</sub></b>
+                                            <button class="show-in-shop">THÊM VÀO GIỎ HÀNG</button>
+                                            <button class="show-buy">MUA NGAY</button>
+                                            <button class="show-like"><i class="bi bi-heart-fill"></i>Thêm vào yêu thích</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-body-item">
+                                    <div class="card">
+                                        <img src="../image/vua-sang-che-tap-18_120003_1.jpeg"
+                                            class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <a href="#" class="card-text">Vua Sáng Chế
+                                            </a>
+                                            <a href="#" class="bro">Tastuki Nohda</a>
+                                            <p class="card-money col-5">20.000<sub>đ</sub></p>
+                                        </div>
+                                        <div class="card-show-right">
+                                            <b class="show-head">Cuộc Xâm Lăng Của Bé Mực - Tập 8 (Tái Bản 2021)</b>
+                                            <a href="#" class="show-author">Anbe Masahiro</a>
+                                            <p class="show-text">Cuộc Xâm Lăng Của Bé Mực - Tập 8 Thật ra câu chuyện này tôi đã suy nghĩ từ trước rồi. 
+                                                Nhưng tôi chưa tập hợp những phác thảo ý tưởng thô và mất thời gian cho phần bối cảnh nên đã hoãn lại mãi. 
+                                                Rất may là cuối cùng cũng được phát hành. Thật khó để sử dụng nhân vật mới "ra lò", nhưng tôi nghĩ từ giờ tôi ...</p>
+                                            <a href="#" class="show-text-more">Xem thêm</a>
+                                            <b class="show-money">48.000<sub>đ</sub></b>
+                                            <button class="show-in-shop">THÊM VÀO GIỎ HÀNG</button>
+                                            <button class="show-buy">MUA NGAY</button>
+                                            <button class="show-like"><i class="bi bi-heart-fill"></i>Thêm vào yêu thích</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-body-item">
+                                    <div class="card">
+                                        <img src="../image/birdmen-tap-7_120002_1.jpeg"
+                                            class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <a href="#" class="card-text">Birdmen - Tập 7
+                                            </a>
+                                            <a href="#" class="bro">Yellow Tanabe</a>
+                                            <p class="card-money col-5">30.000<sub>đ</sub></p>
+                                        </div>
+                                        <div class="card-show-left">
+                                            <b class="show-head">Cuộc Xâm Lăng Của Bé Mực - Tập 8 (Tái Bản 2021)</b>
+                                            <a href="#" class="show-author">Anbe Masahiro</a>
+                                            <p class="show-text">Cuộc Xâm Lăng Của Bé Mực - Tập 8 Thật ra câu chuyện này tôi đã suy nghĩ từ trước rồi. 
+                                                Nhưng tôi chưa tập hợp những phác thảo ý tưởng thô và mất thời gian cho phần bối cảnh nên đã hoãn lại mãi. 
+                                                Rất may là cuối cùng cũng được phát hành. Thật khó để sử dụng nhân vật mới "ra lò", nhưng tôi nghĩ từ giờ tôi ...</p>
+                                            <a href="#" class="show-text-more">Xem thêm</a>
+                                            <b class="show-money">48.000<sub>đ</sub></b>
+                                            <button class="show-in-shop">THÊM VÀO GIỎ HÀNG</button>
+                                            <button class="show-buy">MUA NGAY</button>
+                                            <button class="show-like"><i class="bi bi-heart-fill"></i>Thêm vào yêu thích</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="main-comment">
+            <div class="container">
+                <h4>NHẬN XÉT CỦA KHÁCH HÀNG</h4>
+                <hr>
+                <p>Bạn cần đăng nhập để bình luận.<a href="#">Đăng nhập tại đây.</a></p>
+                <h5>Chưa có đánh giá</h5>
+                <hr>
+                <div></div>
+            </div>
+        </div>
+        <div class="main-comment-content">
+            <div class="container">
+                <div>
+                    <p class="comment-number">0 bình luận</p>
+                    <div class="comment-select">
+                        <p>Sắp xếp theo:</p>
+                        <select>
+                            <option>Cũ nhất</option>
+                            <option>Mới nhất</option>
+                        </select>
+                    </div>
+                    <hr>
+                    <input type="text" placeholder="Viết bình luận...">
+                    <hr>
+                    <a href="#"><img src="../image/face.jpeg">Plugin bình luận trên Facebook</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="share">
+        <div class="container p-0">
+            <div class="row">
+                <div class="col-2">
+                    <img src="../image/canh-cam-letter.png" alt="">
+                </div>
+                <div class="col-4">
+                    <h4>Đăng ký nhận bản tin từ Bookbuy</h4>
+                    <p>Đừng bỏ lỡ những tin nhắn ưu đãi độc quyền dành riêng cho bạn</p>
+                </div>
+                <div class="col-6">
+                    <div class="input-group">
+                        <input type="text" class="form-control"
+                            aria-label="Dollar amount (with dot and two decimal places)" placeholder="Nhập địa chỉ email của bạn">
+                        <button class="input-group-text">NAM</button>
+                        <button class="input-group-text">NỮ</button>
+                        <button class="input-group-text">LGBT</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <p>HỖ TRỢ KHÁCH HÀNG</p>
+                    <a href="#">Sản phẩm & Đơn hàng: 0123 456 789</a>
+                    <a href="#">Kỹ thuật & Bảo hành: 0123 456 789</a>
+                    <a href="#">Điện thoại: (023) 3649 7153 (giờ hành chính)</a>
+                    <a href="#">Email: abc@gmail.com</a>
+                    <a href="#">Địa chỉ: Số 2, Phố B, Thi trấn A, Q1, TP.HCM</a>
+                </div>
+                <div class="col-3">
+                    <p>TRỢ GIÚP</p>
+                    <a href="#">Đăng ký nhận bản tin</a>
+                    <a href="#">Hướng dẫn mua hàng</a>
+                    <a href="#">Phương thức thanh toán</a>
+                    <a href="#">Phương thức vận chuyển</a>
+                    <a href="#">Chính sách đổi - trả</a>
+                </div>
+                <div class="col-3">
+                    <p>TÀI KHOẢN CỦA BẠN</p>
+                    <a href="#">Cập nhập tài khoản</a>
+                    <a href="#">Giỏ hàng</a>
+                    <a href="#">Lịch sử giao dịch</a>
+                    <a href="#">Sản phẩm yêu thích</a>
+                    <a href="#"></a>
+                </div>
+                <div class="col-3">
+                    <p>BOOKBUY</p>
+                    <a href="#">Giới thiệu bookbuy.vn</a>
+                    <a href="#">Bookbuy trên Facebook</a>
+                    <a href="#">Liên hệ bookbuy</a>
+                    <a href="#">Đặt hàng theo yêu cầu</a>
+                    <a href="#">Tích lũy BBxu</a>
+                </div>
+            </div>
+            <div class="hr"><hr style="margin-bottom:3px;"></div>
+            <div class="row">
+                <div class="col-8 transaction">
+                    Chấp nhận thanh toán :
+                    <img src="../image/tien-mat.jpeg" alt="">
+                    <img src="../image/vib-bank.jpeg" alt="">
+                    <img src="../image/bidv-bank.jpeg" alt="">
+                    <img src="../image/vp-bank.png" alt="">
+                </div>
+                <div class="col-4">Làm bạn với BookBuy :
+                    <img src="../image/face.jpeg" alt="">
+                    <img src="../image/zalo.png" alt="">
+                    <img src="../image/instagram.jpeg" alt="">
+                    <img src="../image/twitter.png" alt="">
+                    <img src="../image/youtube.png" alt="">
+                </div>
+            </div>
+            <hr style="margin-top:3px;">
+        </div>
+    </div>
+</body>
+
+</html>

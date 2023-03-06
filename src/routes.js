@@ -63,7 +63,7 @@ const routes = [
 
   { path: '/book/booklist', name: 'BookList', element: BookList },
   { path: '/book/bookshopping', name: 'BookShopping', element: BookShopping },
-  { path: '/book/bookdetails', name: 'BookDetails', element: BookDetail },
+  { path: '/book/bookdetails/:id', name: 'BookDetails', element: BookDetail },
 
   { path: '/theme/typography', name: 'Typography', element: Typography },
   { path: '/base', name: 'Base', element: Cards, exact: true },

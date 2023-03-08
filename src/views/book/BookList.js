@@ -9,10 +9,6 @@ import {
   CTableBody,
   CTableDataCell,
   CButton,
-  CModal,
-  CModalHeader,
-  CModalTitle,
-  CModalBody,
   CModalFooter,
   CForm,
   CCol,
@@ -20,7 +16,6 @@ import {
   CFormTextarea,
   CCollapse,
   CCard,
-  CCardBody,
 } from '@coreui/react'
 import bookAPI from '../bookAPI/bookAPI'
 
@@ -29,6 +24,8 @@ function BookList() {
   const [editBook, setEditBook] = useState({})
   const [visible, setVisible] = useState(false)
   const [validated, setValidated] = useState(false)
+  const [createId, setCreateId] = useState({id:0});
+  let stt = 0
 
   async function fetchBookList() {
     const response = await bookAPI.getAll()
@@ -40,11 +37,17 @@ function BookList() {
   }
 
   async function editBookList(id) {
-    visible ? visible : setVisible(!visible)
+    if(visible) {
+    } else {
+      setVisible(true)
+    }
     const editIteam = await bookAPI.getById(id)
     setEditBook(editIteam.data)
   }
-
+    const handleChange = (event) =>{
+      setEditBook({...editBook,[event.target.name]: event.target.value})
+      console.log(editBook)
+}
   async function handleSubmit(event) {
     debugger
     const form = event.currentTarget
@@ -53,28 +56,34 @@ function BookList() {
       event.stopPropagation()
     }
     setValidated(true)
-    event.preventDefault()
-    if (event.id) {
-      await bookAPI.update(form).then(async () => fetchBookList())
+    // event.preventDefault()
+    if (editBook.id) {
+      await bookAPI.update(editBook.id, editBook).then(async () => fetchBookList())
     } else {
-      await bookAPI.create(form).then(async () => fetchBookList())
+      for(let i = 0;i<bookList.length;i++) {
+        if(i + 1 !== bookList[i].id) {
+          console.log(bookList[i].id)
+          setCreateId({id :i}) 
+        }
+      }
+      if (createId.id === 0 ) {
+        setCreateId({id:bookList.length +1}) 
+      }
+      setEditBook({...editBook, ...createId})  
+      await bookAPI.create(editBook).then(async () => fetchBookList())
     }
-    console.log(event)
+    
   }
 
   useEffect(() => {
     fetchBookList()
   }, [])
 
-  // const handleChange = (event) => {
-  //   debugger
-  //   // setNewBook({[event.currentTarget.name] : event.currentTarget.value})
-  //   console.log(event)
-  // }
 
   return (
     <>
-      <CButton onClick={() => setVisible(!visible)}>Create</CButton>
+      <CButton onClick={() => {setVisible(!visible)
+                              setEditBook({})}}>Create</CButton>
       <CCollapse visible={visible}>
         <CCard className="p-3 ">
             <CForm
@@ -88,10 +97,11 @@ function BookList() {
                   type="text"
                   name="code"
                   defaultValue={editBook.code}
+                  value={editBook.code}
                   feedbackValid="Looks good!"
                   id="validationCustom01"
                   label="Mã sản phẩm"
-                  // onChange={() =>handleChange()}
+                  onChange={handleChange}
                   required
                 />
               </CCol>
@@ -103,6 +113,7 @@ function BookList() {
                   feedbackValid="Looks good!"
                   id="validationCustom02"
                   label="Tên sản phẩm"
+                  onChange={handleChange}
                   required
                 />
               </CCol>
@@ -114,6 +125,7 @@ function BookList() {
                   feedbackValid="Looks good!"
                   id="validationCustom02"
                   label="Tác giả"
+                  onChange={handleChange}
                   required
                 />
               </CCol>
@@ -126,18 +138,20 @@ function BookList() {
                   feedbackInvalid="Not a value."
                   id="validationCustom03"
                   label="Giá"
+                  onChange={handleChange}
                   required
                 />
               </CCol>
               <CCol md={4}>
                 <CFormInput
                   type="number"
-                  defaultValue={editBook.Quantity}
+                  defaultValue={editBook.quantity}
                   name="quantity"
                   aria-describedby="validationCustom03Feedback"
                   feedbackInvalid="Not a value."
                   id="validationCustom03"
                   label="Số lượng"
+                  onChange={handleChange}
                   required
                 />
               </CCol>
@@ -150,6 +164,7 @@ function BookList() {
                   feedbackInvalid="Not a value."
                   id="validationCustom05"
                   label="Năm sb"
+                  onChange={handleChange}
                   required
                 />
               </CCol>
@@ -162,6 +177,7 @@ function BookList() {
                   feedbackInvalid="Not a value."
                   id="validationCustom05"
                   label="Quốc gia"
+                  onChange={handleChange}
                   required
                 />
               </CCol>
@@ -174,18 +190,20 @@ function BookList() {
                   feedbackInvalid="Not a value."
                   id="validationCustom05"
                   label="Ảnh"
+                  onChange={handleChange}
                   required
                 />
               </CCol>
               <CCol md={6}>
                 <CFormInput
-                  type="text"
+                  type="date"
                   defaultValue={editBook.date}
                   name="date"
                   aria-describedby="validationCustom05Feedback"
                   feedbackInvalid="Not a value."
                   id="validationCustom05"
                   label="Ngày nhập"
+                  onChange={handleChange}
                   required
                 />
               </CCol>
@@ -198,11 +216,12 @@ function BookList() {
                   feedbackInvalid="Not a value."
                   id="validationCustom05"
                   label="Tóm tắt"
+                  onChange={handleChange}
                   required
                 />
               </CCol>
               <CCol xs={6}>
-                <CButton color="primary" type="submit" onClick={() => handleSubmit(editBook)}>
+                <CButton color="primary" type="submit">
                   Submit
                 </CButton>
               </CCol>
@@ -232,13 +251,14 @@ function BookList() {
         </CTableHead>
         <CTableBody>
           {bookList.map((book) => {
+            stt += 1
             return (
               <CTableRow key={book.id} className="text-center">
-                <CTableHeaderCell scope=" row ">{book.id}</CTableHeaderCell>
+                <CTableHeaderCell scope=" row ">{stt}</CTableHeaderCell>
                 <CTableDataCell> {book.code} </CTableDataCell>
                 <CTableDataCell> {book.name} </CTableDataCell>
                 <CTableDataCell> {book.price} </CTableDataCell>
-                <CTableDataCell> {book.Quantity} </CTableDataCell>
+                <CTableDataCell> {book.quantity} </CTableDataCell>
                 <CTableDataCell>
                   <CButton color="success" onClick={() => editBookList(book.id)}>
                     Edit

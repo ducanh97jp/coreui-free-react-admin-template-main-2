@@ -76,7 +76,7 @@ function BookShopping() {
                   <input
                     type="text"
                     className="form-control"
-                    placeholder="Bạn cần tìm gì?"
+                    placeholder="Tên truyện cần tìm?"
                     aria-label="Dollar amount (with dot and two decimal places)"
                   />
                   <button className="input-group-text">
@@ -271,7 +271,7 @@ function BookShopping() {
                 >
                   <div className="carousel-inner">
                     <div className="carousel-item active" data-bs-interval="10000">
-                      <img src="../image/banner-1.png" className="d-block w-100" alt="..." />
+                      <img src="https://bookbuy.vn/Res/Images/Album/6bfae9a9-1025-43a0-bdf6-32918fa9dbfe.png" className="d-block w-100" alt="..." />
                     </div>
                     <div className="carousel-item" data-bs-interval="2000">
                       <img src="../image/banner-2.jpeg" className="d-block w-100" alt="..." />

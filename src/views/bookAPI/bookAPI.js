@@ -13,8 +13,8 @@ const bookAPI = {
     create: (params) => {
         return axiosClient.post(url, params)
     },
-    update: (params) => {
-        return axiosClient.put(url, params)
+    update: (id, params) => {
+        return axiosClient.put(`${url}/${id}`, params)
     },
 }
 export default bookAPI;

@@ -6,10 +6,26 @@ import '../CSS-File/main.css'
 function BookShopping() {
 
     const [bookList, setBookList] = useState([])
+    const [buyShopBook, setBuyShopBook] = useState({})
+    let quantityBuyBook = 0
+    let showLeft = 0
 
     async function fetchBookList() {
         const response = await bookAPI.getAll()
         setBookList(response.data)
+    }
+
+    const importShop = (event) => {
+      debugger
+      setBuyShopBook({...buyShopBook, event})
+      if (event) {
+        quantityBuyBook += 1
+      }
+      console.log(buyShopBook)
+    }
+
+    const buyBook = () => {
+      
     }
 
     useEffect(() => {
@@ -102,7 +118,7 @@ function BookShopping() {
                     <i className="bi bi-cart"></i>
                   </div>
                   <div className="col-9">
-                    <p>Giỏ hàng (0)</p>
+                    <p>Giỏ hàng ({quantityBuyBook})</p>
                   </div>
                 </div>
               </div>
@@ -274,7 +290,7 @@ function BookShopping() {
                       <img src="https://bookbuy.vn/Res/Images/Album/6bfae9a9-1025-43a0-bdf6-32918fa9dbfe.png" className="d-block w-100" alt="..." />
                     </div>
                     <div className="carousel-item" data-bs-interval="2000">
-                      <img src="../image/banner-2.jpeg" className="d-block w-100" alt="..." />
+                      <img src="https://bookbuy.vn/Res/Images/Album/478e0bfd-fa75-4954-a7ac-e858b5ebe8d7.jpg" className="d-block w-100" alt="..." />
                     </div>
                   </div>
                   <button
@@ -311,6 +327,8 @@ function BookShopping() {
               <div className="main-right__new-product__list">
                 <div className="row">
                   {bookList.map((book) => {
+                    showLeft += 1
+                    let classShow = (showLeft % 4 === 0) ? "card-show-left" : "card-show-right"
                     return (
                       <div className="col-3" key={book.id}>
                         <div className="card">
@@ -326,7 +344,7 @@ function BookShopping() {
                               <sub>đ</sub>
                             </p>
                           </div>
-                          <div className="card-show-right">
+                          <div className={classShow}>
                             <b className="show-head">{book.name}</b>
                             <a href="#" className="show-author">
                               {book.author}
@@ -337,8 +355,8 @@ function BookShopping() {
                               {book.price}
                               <sub>đ</sub>
                             </b>
-                            <button className="show-in-shop">THÊM VÀO GIỎ HÀNG</button>
-                            <button className="show-buy">MUA NGAY</button>
+                            <button className="show-in-shop" onClick={() => importShop(book)}>THÊM VÀO GIỎ HÀNG</button>
+                            <button className="show-buy" onClick={() => buyBook(book)}>MUA NGAY</button>
                           </div>
                         </div>
                       </div>
@@ -363,6 +381,8 @@ function BookShopping() {
                     <div className="carousel-item active" >
                       <div className="row">
                           {bookList.map((book) => {
+                            showLeft += 1
+                            let classShow = (showLeft % 4 === 0) ? "card-show-left" : "card-show-right"
                             if (book.id <= 4) {
                               return (
                             <div className="col-3" key={book.id}>
@@ -395,7 +415,7 @@ function BookShopping() {
                                     <p className="sale-money col-2">-15%</p>
                                   </div>
                                 </div>
-                                <div className="card-show-right">
+                                <div className={classShow}>
                                   <b className="show-head">
                                   {book.name}
                                   </b>
@@ -408,8 +428,8 @@ function BookShopping() {
                                   <b className="show-money">
                                     {book.price}<sub>đ</sub>
                                   </b>
-                                  <button className="show-in-shop">THÊM VÀO GIỎ HÀNG</button>
-                                  <button className="show-buy">MUA NGAY</button>
+                                  <button className="show-in-shop" onClick={() => importShop()}>THÊM VÀO GIỎ HÀNG</button>
+                                  <button className="show-buy" onClick={() => buyBook()}>MUA NGAY</button>
                                 </div>
                               </div>
                             </div>
@@ -421,6 +441,8 @@ function BookShopping() {
                     <div className="carousel-item" >
                       <div className="row">
                         {bookList.map((book) => {
+                          showLeft += 1
+                          let classShow = (showLeft % 4 === 0) ? "card-show-left" : "card-show-right"
                                   if (book.id > 4) {
                                     return (
                                       <div className="col-3" key={book.id}>
@@ -453,7 +475,7 @@ function BookShopping() {
                                               <p className="sale-money col-2">-15%</p>
                                             </div>
                                           </div>
-                                          <div className="card-show-right">
+                                          <div className={classShow}>
                                             <b className="show-head">
                                             {book.name}
                                             </b>
@@ -466,8 +488,8 @@ function BookShopping() {
                                             <b className="show-money">
                                               {book.price}<sub>đ</sub>
                                             </b>
-                                            <button className="show-in-shop">THÊM VÀO GIỎ HÀNG</button>
-                                            <button className="show-buy">MUA NGAY</button>
+                                            <button className="show-in-shop" onClick={() => importShop()}>THÊM VÀO GIỎ HÀNG</button>
+                                            <button className="show-buy" onClick={() => buyBook()}>MUA NGAY</button>
                                           </div>
                                         </div>
                                       </div>

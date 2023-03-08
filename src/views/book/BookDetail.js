@@ -36,9 +36,9 @@ function BookDetails() {
     fetchBookList()
   },[])
 
-  async function importShop (id) {
-    const response = await bookAPI.getById(id)
-    setSelectAll([...selectAll,response.data])
+  function importShop (event) {
+    // const response = await bookAPI.getById(id)
+    setSelectAll([...selectAll,event])
       console.log(selectAll)
   }
   function buyBook (id) {}
@@ -302,7 +302,7 @@ function BookDetails() {
                       <button onClick={() => setNumber(parseFloat(number) +1)}>+</button>
                     </div>
                     <div className="button-buy">
-                      <button className="button-buy__in-cart" onClick={() => importShop(detailValue.id)}>THÊM VÀO GIỎ HÀNG</button>
+                      <button className="button-buy__in-cart" onClick={() => importShop(detailValue)}>THÊM VÀO GIỎ HÀNG</button>
                       <button className="button-buy__buy" onClick={() => buyBook()}>MUA NGAY</button>
                     </div>
                     <p className="body-text">
@@ -402,7 +402,7 @@ function BookDetails() {
                     <b className="show-money">
                       {value.price}<sub>đ</sub>
                     </b>
-                    <button className="show-in-shop" onClick={() => importShop(detailValue.id)}>THÊM VÀO GIỎ HÀNG</button>
+                    <button className="show-in-shop" onClick={() => importShop(value)}>THÊM VÀO GIỎ HÀNG</button>
                     <button className="show-buy" onClick={() => buyBook()}>MUA NGAY</button>
                   </div>
                 </div>
@@ -573,7 +573,7 @@ function BookDetails() {
                           <b className="show-money">
                             {value.price}<sub>đ</sub>
                           </b>
-                          <button className="show-in-shop" onClick={() => importShop(detailValue.id)}>THÊM VÀO GIỎ HÀNG</button>
+                          <button className="show-in-shop" onClick={() => importShop(value)}>THÊM VÀO GIỎ HÀNG</button>
                           <button className="show-buy" onClick={() => buyBook()}>MUA NGAY</button>
                         </div>
                       </div>

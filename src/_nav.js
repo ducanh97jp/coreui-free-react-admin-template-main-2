@@ -38,6 +38,11 @@ const _nav = [
         name: 'BookDetails',
         to: '/book/BookDetails',
       },
+      {
+        component: CNavItem,
+        name: 'Buy',
+        to: '/book/buy',
+      },
     ],
   },
   {

@@ -1,24 +1,20 @@
 import React from 'react'
 import '../CSS-File/detail.css'
 import { 
-  CImage
-} from '@coreui/react'
-import { 
-  cilZoom,
   cilShieldAlt
 } from '@coreui/icons';
 import CIcon from '@coreui/icons-react'
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import bookAPI from '../bookAPI/bookAPI';
-
-
-
+import buyBookAPI from '../bookAPI/buyBookAPI';
 function BookDetails() {
   const [detailValue, setDetailValue] = useState({})
   const [bookList, setBookList] = useState([])
   const [number, setNumber] = useState(1)
-  const [selectAll, setSelectAll] = useState([])
+  const [buyShopBook, setBuyShopBook] = useState([])
+  const [addBook, setAddBook] = useState({})
+
 
   async function getBookDetail (id) {
     const response = await bookAPI.getById(id)
@@ -29,19 +25,25 @@ function BookDetails() {
     const response = await bookAPI.getAll()
     setBookList(response.data)
 }
+
+async function fetchBuyBookList() {
+  const response = await buyBookAPI.getAll()
+  setBuyShopBook(response.data)
+}
+async function importShop(event) {
+  debugger
+  for (let i = 1; i <= number;i ++) {
+    await buyBookAPI.create(event).then(async () => fetchBuyBookList())
+  }
+}
+
   let params = useParams()
 
   useEffect(() => {
     getBookDetail(params.id)
     fetchBookList()
+    fetchBuyBookList()
   },[])
-
-  function importShop (event) {
-    // const response = await bookAPI.getById(id)
-    setSelectAll([...selectAll,event])
-      console.log(selectAll)
-  }
-  function buyBook (id) {}
 
   return (
     <>
@@ -126,7 +128,7 @@ function BookDetails() {
                     <i className="bi bi-cart"></i>
                   </div>
                   <div className="col-9">
-                    <p>Giỏ hàng ({selectAll.length})</p>
+                    <a href={'#/book/addBookList'}><p>Giỏ hàng ({buyShopBook.length})</p></a>
                   </div>
                 </div>
               </div>
@@ -303,7 +305,7 @@ function BookDetails() {
                     </div>
                     <div className="button-buy">
                       <button className="button-buy__in-cart" onClick={() => importShop(detailValue)}>THÊM VÀO GIỎ HÀNG</button>
-                      <button className="button-buy__buy" onClick={() => buyBook()}>MUA NGAY</button>
+                      <a href={'#/book/addBookList'}><button className="button-buy__buy" onClick={() => importShop(detailValue)}>MUA NGAY</button></a>
                     </div>
                     <p className="body-text">
                       Gọi đặt hàng: <a href="#">(028) 123 446</a> hoặc <a href="#">0234 543 433</a>
@@ -403,7 +405,7 @@ function BookDetails() {
                       {value.price}<sub>đ</sub>
                     </b>
                     <button className="show-in-shop" onClick={() => importShop(value)}>THÊM VÀO GIỎ HÀNG</button>
-                    <button className="show-buy" onClick={() => buyBook()}>MUA NGAY</button>
+                    <a href={'#/book/addBookList'}><button className="show-buy" onClick={() => importShop(value)}>MUA NGAY</button></a>
                   </div>
                 </div>
                 </div>
@@ -453,7 +455,7 @@ function BookDetails() {
                     <a href="#">Mua sách online</a> tại Bookbuy.vn và nhận nhiều ưu đãi.
                   </p>
                   <div className="button">
-                    <button onClick={() => buyBook()}>Mua ngay</button>
+                    <a href={'#/book/addBookList'}><button onClick={() => importShop(detailValue)}>Mua ngay</button></a>
                   </div>
                 </div>
               </div>
@@ -472,7 +474,7 @@ function BookDetails() {
                         alt="..."
                       />
                       <div className="card-body">
-                        <a href="#" className="card-text">
+                        <a href={`#/book/bookdetails/${value.id}`} className="card-text">
                           {value.name}
                         </a>
                         <a href="#" className="bro">
@@ -505,7 +507,7 @@ function BookDetails() {
                         alt="..."
                       />
                       <div className="card-body">
-                        <a href="#" className="card-text">
+                        <a href={`#/book/bookdetails/${value.id}`} className="card-text">
                           {value.name}
                         </a>
                         <a href="#" className="bro">
@@ -574,246 +576,12 @@ function BookDetails() {
                             {value.price}<sub>đ</sub>
                           </b>
                           <button className="show-in-shop" onClick={() => importShop(value)}>THÊM VÀO GIỎ HÀNG</button>
-                          <button className="show-buy" onClick={() => buyBook()}>MUA NGAY</button>
+                          <a href={`#/book/buy/${value}`}><button className="show-buy" onClick={() => importShop(value)}>MUA NGAY</button></a>
                         </div>
                       </div>
                     </div>
                       )
                     })}
-                  </div>
-                </div>
-                <div className="carousel-item">
-                  <div className="carousel-body">
-                    <div className="carousel-body-item">
-                      <div className="card">
-                        <img
-                          src="../image/dragon-quest-dau-an-roto-perfect-edition-tap-10_120018_1.jpeg"
-                          className="card-img-top"
-                          alt="..."
-                        />
-                        <div className="card-body">
-                          <a href="#" className="card-text">
-                            Dragon Quest - Dấu Ấn Roto - Perfect Edition Tập 10
-                          </a>
-                          <a href="#" className="bro">
-                            Kamui Fujiwara
-                          </a>
-                          <p className="card-money col-5">
-                            75.000<sub>đ</sub>
-                          </p>
-                        </div>
-                        <div className="card-show-right">
-                          <b className="show-head">
-                            Cuộc Xâm Lăng Của Bé Mực - Tập 8 (Tái Bản 2021)
-                          </b>
-                          <a href="#" className="show-author">
-                            Anbe Masahiro
-                          </a>
-                          <p className="show-text">
-                            Cuộc Xâm Lăng Của Bé Mực - Tập 8 Thật ra câu chuyện này tôi đã suy nghĩ
-                            từ trước rồi. Nhưng tôi chưa tập hợp những phác thảo ý tưởng thô và mất
-                            thời gian cho phần bối cảnh nên đã hoãn lại mãi. Rất may là cuối cùng
-                            cũng được phát hành. Thật khó để sử dụng nhân vật mới ra lò, nhưng tôi
-                            nghĩ từ giờ tôi ...
-                          </p>
-                          <a href="#" className="show-text-more">
-                            Xem thêm
-                          </a>
-                          <b className="show-money">
-                            48.000<sub>đ</sub>
-                          </b>
-                          <button className="show-in-shop">THÊM VÀO GIỎ HÀNG</button>
-                          <button className="show-buy">MUA NGAY</button>
-                          <button className="show-like">
-                            <i className="bi bi-heart-fill"></i>Thêm vào yêu thích
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="carousel-body-item">
-                      <div className="card">
-                        <img
-                          src="../image/dragon-quest-dau-an-roto-perfect-edition-tap-9_120017_1.jpeg"
-                          className="card-img-top"
-                          alt="..."
-                        />
-                        <div className="card-body">
-                          <a href="#" className="card-text">
-                            Dragon Quest - Dấu Ấn Roto - Perfect Edition Tập 9
-                          </a>
-                          <a href="#" className="bro">
-                            Kamui Fujiwara
-                          </a>
-                          <p className="card-money col-5">
-                            75.000<sub>đ</sub>
-                          </p>
-                        </div>
-                        <div className="card-show-right">
-                          <b className="show-head">
-                            Cuộc Xâm Lăng Của Bé Mực - Tập 8 (Tái Bản 2021)
-                          </b>
-                          <a href="#" className="show-author">
-                            Anbe Masahiro
-                          </a>
-                          <p className="show-text">
-                            Cuộc Xâm Lăng Của Bé Mực - Tập 8 Thật ra câu chuyện này tôi đã suy nghĩ
-                            từ trước rồi. Nhưng tôi chưa tập hợp những phác thảo ý tưởng thô và mất
-                            thời gian cho phần bối cảnh nên đã hoãn lại mãi. Rất may là cuối cùng
-                            cũng được phát hành. Thật khó để sử dụng nhân vật mới ra lò, nhưng tôi
-                            nghĩ từ giờ tôi ...
-                          </p>
-                          <a href="#" className="show-text-more">
-                            Xem thêm
-                          </a>
-                          <b className="show-money">
-                            48.000<sub>đ</sub>
-                          </b>
-                          <button className="show-in-shop">THÊM VÀO GIỎ HÀNG</button>
-                          <button className="show-buy">MUA NGAY</button>
-                          <button className="show-like">
-                            <i className="bi bi-heart-fill"></i>Thêm vào yêu thích
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="carousel-body-item">
-                      <div className="card">
-                        <img
-                          src="../image/blue-flag-tap-3_120016_1.jpeg"
-                          className="card-img-top"
-                          alt="..."
-                        />
-                        <div className="card-body">
-                          <a href="#" className="card-text">
-                            Blue Flag - Tập 3
-                          </a>
-                          <a href="#" className="bro">
-                            Kaito
-                          </a>
-                          <p className="card-money col-5">
-                            45.000<sub>đ</sub>
-                          </p>
-                        </div>
-                        <div className="card-show-right">
-                          <b className="show-head">
-                            Cuộc Xâm Lăng Của Bé Mực - Tập 8 (Tái Bản 2021)
-                          </b>
-                          <a href="#" className="show-author">
-                            Anbe Masahiro
-                          </a>
-                          <p className="show-text">
-                            Cuộc Xâm Lăng Của Bé Mực - Tập 8 Thật ra câu chuyện này tôi đã suy nghĩ
-                            từ trước rồi. Nhưng tôi chưa tập hợp những phác thảo ý tưởng thô và mất
-                            thời gian cho phần bối cảnh nên đã hoãn lại mãi. Rất may là cuối cùng
-                            cũng được phát hành. Thật khó để sử dụng nhân vật mới ra lò, nhưng tôi
-                            nghĩ từ giờ tôi ...
-                          </p>
-                          <a href="#" className="show-text-more">
-                            Xem thêm
-                          </a>
-                          <b className="show-money">
-                            48.000<sub>đ</sub>
-                          </b>
-                          <button className="show-in-shop">THÊM VÀO GIỎ HÀNG</button>
-                          <button className="show-buy">MUA NGAY</button>
-                          <button className="show-like">
-                            <i className="bi bi-heart-fill"></i>Thêm vào yêu thích
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="carousel-body-item">
-                      <div className="card">
-                        <img
-                          src="../image/vua-sang-che-tap-18_120003_1.jpeg"
-                          className="card-img-top"
-                          alt="..."
-                        />
-                        <div className="card-body">
-                          <a href="#" className="card-text">
-                            Vua Sáng Chế
-                          </a>
-                          <a href="#" className="bro">
-                            Tastuki Nohda
-                          </a>
-                          <p className="card-money col-5">
-                            20.000<sub>đ</sub>
-                          </p>
-                        </div>
-                        <div className="card-show-right">
-                          <b className="show-head">
-                            Cuộc Xâm Lăng Của Bé Mực - Tập 8 (Tái Bản 2021)
-                          </b>
-                          <a href="#" className="show-author">
-                            Anbe Masahiro
-                          </a>
-                          <p className="show-text">
-                            Cuộc Xâm Lăng Của Bé Mực - Tập 8 Thật ra câu chuyện này tôi đã suy nghĩ
-                            từ trước rồi. Nhưng tôi chưa tập hợp những phác thảo ý tưởng thô và mất
-                            thời gian cho phần bối cảnh nên đã hoãn lại mãi. Rất may là cuối cùng
-                            cũng được phát hành. Thật khó để sử dụng nhân vật mới ra lò, nhưng tôi
-                            nghĩ từ giờ tôi ...
-                          </p>
-                          <a href="#" className="show-text-more">
-                            Xem thêm
-                          </a>
-                          <b className="show-money">
-                            48.000<sub>đ</sub>
-                          </b>
-                          <button className="show-in-shop">THÊM VÀO GIỎ HÀNG</button>
-                          <button className="show-buy">MUA NGAY</button>
-                          <button className="show-like">
-                            <i className="bi bi-heart-fill"></i>Thêm vào yêu thích
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="carousel-body-item">
-                      <div className="card">
-                        <img
-                          src="../image/birdmen-tap-7_120002_1.jpeg"
-                          className="card-img-top"
-                          alt="..."
-                        />
-                        <div className="card-body">
-                          <a href="#" className="card-text">
-                            Birdmen - Tập 7
-                          </a>
-                          <a href="#" className="bro">
-                            Yellow Tanabe
-                          </a>
-                          <p className="card-money col-5">
-                            30.000<sub>đ</sub>
-                          </p>
-                        </div>
-                        <div className="card-show-left">
-                          <b className="show-head">
-                            Cuộc Xâm Lăng Của Bé Mực - Tập 8 (Tái Bản 2021)
-                          </b>
-                          <a href="#" className="show-author">
-                            Anbe Masahiro
-                          </a>
-                          <p className="show-text">
-                            Cuộc Xâm Lăng Của Bé Mực - Tập 8 Thật ra câu chuyện này tôi đã suy nghĩ
-                            từ trước rồi. Nhưng tôi chưa tập hợp những phác thảo ý tưởng thô và mất
-                            thời gian cho phần bối cảnh nên đã hoãn lại mãi. Rất may là cuối cùng
-                            cũng được phát hành. Thật khó để sử dụng nhân vật mới ra lò, nhưng tôi
-                            nghĩ từ giờ tôi ...
-                          </p>
-                          <a href="#" className="show-text-more">
-                            Xem thêm
-                          </a>
-                          <b className="show-money">
-                            48.000<sub>đ</sub>
-                          </b>
-                          <button className="show-in-shop">THÊM VÀO GIỎ HÀNG</button>
-                          <button className="show-buy">MUA NGAY</button>
-                          <button className="show-like">
-                            <i className="bi bi-heart-fill"></i>Thêm vào yêu thích
-                          </button>
-                        </div>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>

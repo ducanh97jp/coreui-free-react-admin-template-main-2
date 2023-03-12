@@ -24,7 +24,6 @@ function BookList() {
   const [editBook, setEditBook] = useState({})
   const [visible, setVisible] = useState(false)
   const [validated, setValidated] = useState(false)
-  const [createId, setCreateId] = useState({id:0});
   let stt = 0
 
   async function fetchBookList() {
@@ -60,16 +59,7 @@ function BookList() {
     if (editBook.id) {
       await bookAPI.update(editBook.id, editBook).then(async () => fetchBookList())
     } else {
-      for(let i = 0;i<bookList.length;i++) {
-        if(i + 1 !== bookList[i].id) {
-          console.log(bookList[i].id)
-          setCreateId({id :i}) 
-        }
-      }
-      if (createId.id === 0 ) {
-        setCreateId({id:bookList.length +1}) 
-      }
-      setEditBook({...editBook, ...createId})  
+      setEditBook({...editBook})  
       await bookAPI.create(editBook).then(async () => fetchBookList())
     }
     

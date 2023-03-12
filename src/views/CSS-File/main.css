@@ -131,6 +131,10 @@ body {
 .header-bottom .header__shop p {
   padding: 10px;
 }
+.header-bottom .header__shop a {
+  text-decoration: none;
+  color: black;
+}
 
 .nav {
   height: 60px;

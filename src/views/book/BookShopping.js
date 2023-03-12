@@ -1,13 +1,15 @@
 
 import React, { useEffect, useState } from 'react'
 import bookAPI from '../bookAPI/bookAPI'
+import buyBookAPI from '../bookAPI/buyBookAPI'
 import '../CSS-File/main.css'
 
 function BookShopping() {
 
     const [bookList, setBookList] = useState([])
-    const [buyShopBook, setBuyShopBook] = useState({})
-    let quantityBuyBook = 0
+    const [buyShopBook, setBuyShopBook] = useState([])
+    const [addBook, setAddBook] = useState({})
+    // const [checkBuy, setCheckBuy] = useState(false)
     let showLeft = 0
 
     async function fetchBookList() {
@@ -15,21 +17,53 @@ function BookShopping() {
         setBookList(response.data)
     }
 
-    const importShop = (event) => {
+    async function fetchBuyBookList() {
+      const response = await buyBookAPI.getAll()
+      setBuyShopBook(response.data)
+  }
+    async function importShop(event) {
+      console.log(event)
       debugger
-      setBuyShopBook({...buyShopBook, event})
-      if (event) {
-        quantityBuyBook += 1
+      // if (buyShopBook.length > 1) {
+      //   for (let i = 1; i < buyShopBook.length; i++) {
+      //   if(event.code === buyShopBook[i].code) {
+      //     setAddBook(buyShopBook[i])
+      //     let updateQuantity = buyShopBook[i].quantity +1
+      //     setAddBook( buy => {
+      //       return { ...buy, quantity: updateQuantity + 1}
+      //     })
+      //     // setCheckBuy(true)
+          
+      //     await buyBookAPI.update(event.id, addBook).then(async () => fetchBuyBookList())
+      //   } else {
+      //     setAddBook(event)
+      //     setAddBook( buy => {
+      //     return { ...buy, quantity:1, date:day}
+      //   })
+      //   await buyBookAPI.create(addBook).then(async () => fetchBuyBookList())
+      //   }
+      // }
+      // } else {
+        
+        // setCheckBuy(false)
+      // }
+      // if (checkBuy) {
+      //   await buyBookAPI.update(event.id, addBook).then(async () => fetchBuyBookList())
+      // } else {
+      // let today = new Date()
+      // let day = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+      //   setAddBook( buy => {
+      //     return { ...event, quantity:1, date:day}
+      //   })
+        await buyBookAPI.create(event).then(async () => fetchBuyBookList())
       }
-      console.log(buyShopBook)
-    }
-
-    const buyBook = () => {
+    const buyBook = (event) => {
       
     }
 
     useEffect(() => {
         fetchBookList()
+        fetchBuyBookList()
       }, [])
 
   return (
@@ -118,7 +152,7 @@ function BookShopping() {
                     <i className="bi bi-cart"></i>
                   </div>
                   <div className="col-9">
-                    <p>Giỏ hàng ({quantityBuyBook})</p>
+                    <a href={'#/book/addBookList'}><p>Giỏ hàng ({buyShopBook.length})</p></a>
                   </div>
                 </div>
               </div>
@@ -332,7 +366,7 @@ function BookShopping() {
                     return (
                       <div className="col-3" key={book.id}>
                         <div className="card">
-                          <a href={`/book/bookdetails/${book.id}`} className="card-img">
+                          <a href={`#/book/bookdetails/${book.id}`} className="card-img">
                             <img src={book.image} className="card-img-top" alt="..." />
                           </a>
                           <div className="card-body">
@@ -355,8 +389,8 @@ function BookShopping() {
                               {book.price}
                               <sub>đ</sub>
                             </b>
-                            <button className="show-in-shop" onClick={() => importShop(book)}>THÊM VÀO GIỎ HÀNG</button>
-                            <button className="show-buy" onClick={() => buyBook(book)}>MUA NGAY</button>
+                            <a><button className="show-in-shop" onClick={() => importShop(book)}>THÊM VÀO GIỎ HÀNG</button></a>
+                            <a href={'#/book/addBookList'}><button className="show-buy" onClick={() => importShop(book)}>MUA NGAY</button></a>
                           </div>
                         </div>
                       </div>
@@ -387,7 +421,7 @@ function BookShopping() {
                               return (
                             <div className="col-3" key={book.id}>
                               <div className="card">
-                                <a href={`/book/bookdetails/${book.id}`} className="card-img">
+                                <a href={`#/book/bookdetails/${book.id}`} className="card-img">
                                   <img
                                     src={book.image}
                                     className="card-img-top"
@@ -396,7 +430,7 @@ function BookShopping() {
                                 </a>
                                 <div className="card-body">
                                   <p className="card-text">
-                                    <a href={`/book/bookdetails/${book.id}`}>
+                                    <a href={`#/book/bookdetails/${book.id}`}>
                                       {book.name}
                                     </a>
                                   </p>
@@ -428,8 +462,8 @@ function BookShopping() {
                                   <b className="show-money">
                                     {book.price}<sub>đ</sub>
                                   </b>
-                                  <button className="show-in-shop" onClick={() => importShop()}>THÊM VÀO GIỎ HÀNG</button>
-                                  <button className="show-buy" onClick={() => buyBook()}>MUA NGAY</button>
+                                  <button className="show-in-shop" onClick={() => importShop(book)}>THÊM VÀO GIỎ HÀNG</button>
+                                  <a href={'#/book/addBookList'}><button className="show-buy" onClick={() => importShop(book)}>MUA NGAY</button></a>
                                 </div>
                               </div>
                             </div>
@@ -447,7 +481,7 @@ function BookShopping() {
                                     return (
                                       <div className="col-3" key={book.id}>
                                         <div className="card">
-                                          <a href="detail.html" className="card-img">
+                                          <a href={`#/book/bookdetails/${book.id}`} className="card-img">
                                             <img
                                               src={book.image}
                                               className="card-img-top"
@@ -456,7 +490,7 @@ function BookShopping() {
                                           </a>
                                           <div className="card-body">
                                             <p className="card-text">
-                                              <a href="#">
+                                              <a href={`#/book/bookdetails/${book.id}`}>
                                                 {book.name}
                                               </a>
                                             </p>
@@ -488,8 +522,8 @@ function BookShopping() {
                                             <b className="show-money">
                                               {book.price}<sub>đ</sub>
                                             </b>
-                                            <button className="show-in-shop" onClick={() => importShop()}>THÊM VÀO GIỎ HÀNG</button>
-                                            <button className="show-buy" onClick={() => buyBook()}>MUA NGAY</button>
+                                            <button className="show-in-shop" onClick={() => importShop(book)}>THÊM VÀO GIỎ HÀNG</button>
+                                            <a href={'#/book/addBookList'}><button className="show-buy" onClick={() => importShop(book)}>MUA NGAY</button></a>
                                           </div>
                                         </div>
                                       </div>

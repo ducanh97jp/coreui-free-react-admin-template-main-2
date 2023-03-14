@@ -32,9 +32,26 @@ async function fetchBuyBookList() {
 }
 async function importShop(event) {
   debugger
-  for (let i = 1; i <= number;i ++) {
-    await buyBookAPI.create(event).then(async () => fetchBuyBookList())
-  }
+  let checkValues = false
+      let data = {}
+      let a = 0
+      for(let i = 0; i < buyShopBook.length; i ++) {
+        checkValues = buyShopBook[i].code.includes(event.code)
+          if (checkValues) {
+            a += 1
+            let newQuantity = {quantity: parseInt(buyShopBook[i].quantity) + number}
+            data = buyShopBook[i]
+            let datas = {...data, ...newQuantity}
+            console.log(datas)
+            await buyBookAPI.update(datas.id, datas).then(async () => fetchBookList())
+          } 
+      }
+      if (a === 0) {
+        let newQuantity = {quantity:number}
+        data = event
+        let datas = { ...event, ...newQuantity}
+        await buyBookAPI.create(datas).then(async () => fetchBuyBookList())
+      }
 }
 
   let params = useParams()

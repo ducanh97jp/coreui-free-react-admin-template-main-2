@@ -15,9 +15,8 @@ function AddBookList() {
     const [bookList, setBookList] = useState([])
     const [visible, setVisible] = useState(false)
     const [validated, setValidated] = useState(false)
-    const [editBook, setEditBook] = useState({})
-    const [book, setBook] = useState({})
     const [price, setPrice] = useState()
+    // const [book,setBook] = useState({})
     let result = 0
 
     async function fetchBuyBookList() {
@@ -32,7 +31,7 @@ function AddBookList() {
     function results() {
       // khi render biến réult đã được gán rồi nên giá ở giao diện chưa thay đổi vân là 0đ
       for (let i = 0; i < buyShopBook.length; i++) {
-        result += parseInt(buyShopBook[i].price)
+        result = result + (parseInt(buyShopBook[i].price) * buyShopBook[i].quantity)
       }
       return result
     }
@@ -57,54 +56,29 @@ function AddBookList() {
           event.stopPropagation()
       } 
       setValidated(true)
-      updateData()
-      // await bookAPI.update(editBook.id, editBook).then(async () => fetchBookList())
-      // alert("giao dich thanh cong")
-      // setVisible(!visible)
-    }  
-    function checkValue() {
+      checkValue()
+      alert("giao dich thanh cong")
       setVisible(!visible)
-      setPrice(results())
-      // let checkValues = false
-      // for (let i = 0;i < bookList.length;i++) {
-      //   for (let j = 0;j < buyShopBook.length;j++) {
-      //     checkValues = bookList[i].code.includes(buyShopBook[j].code)
-      //     // console.log([i] + [j] +checkValues)
-      //     if (checkValues) {
-      //       let newQuantity = parseInt(bookList[i].quantity) - 1
-      //       setEditBook(book => {
-      //         return {...bookList[i],quantity : newQuantity}
-      //       })
-      //       console.log(bookList[i])
-      //       console.log(editBook)
-      //       // updateQuantityBookList(editBook.id,editBook)
-      //     }
-      //   }
-      // }
-    }
-    function updateData () {
+    }  
+    async function checkValue() {
       debugger
       let checkValues = false
-      for (let i = 0; i < bookList.length; i++) {
-        for (let j = 0; j < buyShopBook.length; j++) {
-          let searchValue = new Promise(function (resolve, reject) {
-            checkValues = bookList[i].code.includes(buyShopBook[j].code)
-            if (checkValues) {
-              let newQuantity = parseInt(bookList[i].quantity) - 1
-              setEditBook(book => {
-                return {...bookList[i],quantity : newQuantity}
-              })
-              resolve(editBook)
-            }
-          })
-        searchValue.then(async (value) => {
-          await bookAPI.update(value.id, value).then(async () => fetchBookList())
-          setPrice(results())
-        })
+      let data = {}
+      for (let i = 0;i < bookList.length;i++) {
+        for (let j = 0;j < buyShopBook.length;j++) {
+          checkValues = bookList[i].code.includes(buyShopBook[j].code)
+          if (checkValues) {
+            let newQuantity = {quantity: parseInt(bookList[i].quantity) - parseInt(buyShopBook[j].quantity)}
+            data = bookList[i]
+            let datas = {...data, ...newQuantity}
+            await bookAPI.update(datas.id, datas).then(async () => fetchBookList())
+          }
         }
-        
       }
-      alert("giao dich thanh cong")
+    }
+    function changePrice() {
+      setVisible(!visible)
+      setPrice(results())
     }
 
     return (
@@ -122,7 +96,7 @@ function AddBookList() {
       <CFormInput
         type="text"
         name="name"
-        defaultValue="a"
+        // defaultValue="a"
         feedbackInvalid="Vui lòng nhập họ tên"
         id="validationCustom01"
         label="Họ tên"
@@ -134,7 +108,7 @@ function AddBookList() {
       <CFormInput
         type="email"
         name="email"
-        defaultValue="anh@gamil.com"
+        // defaultValue="anh@gamil.com"
         feedbackInvalid="Vui lòng nhập email"
         id="validationCustom02"
         label="Email đăng ký"
@@ -146,8 +120,7 @@ function AddBookList() {
       <CFormInput
         type="text"
         name="province"
-        defaultValue="a"
-
+        // defaultValue="a"
         aria-describedby="validationCustom03Feedback"
         feedbackInvalid="Vui lòng nhập tên tỉnh"
         id="validationCustom03"
@@ -160,8 +133,7 @@ function AddBookList() {
       <CFormInput
         type="text"
         name="district"
-        defaultValue="a"
-
+        // defaultValue="a"
         aria-describedby="validationCustom03Feedback"
         feedbackInvalid="Vui lòng nhập tên quận, huyện"
         id="validationCustom03"
@@ -174,8 +146,7 @@ function AddBookList() {
       <CFormInput
         type="text"
         name="commune"        
-        defaultValue="a"
-
+        // defaultValue="a"
         aria-describedby="validationCustom03Feedback"
         feedbackInvalid="Vui lòng nhập tên xã, thị trấn"
         id="validationCustom03"
@@ -188,8 +159,7 @@ function AddBookList() {
       <CFormInput
         type="text"
         name="address"
-        defaultValue="a"
-
+        // defaultValue="a"
         aria-describedby="validationCustom03Feedback"
         feedbackInvalid="Vui lòng nhập tên đường, số nhà"
         id="validationCustom03"
@@ -200,10 +170,9 @@ function AddBookList() {
     </CCol>
     <CCol md={4}>
       <CFormInput
-        type="phone"
+        type="tel"
         name="phoneNumber"
-        defaultValue="123456789"
-
+        // defaultValue="123456789"
         aria-describedby="validationCustom03Feedback"
         feedbackInvalid="Vui lòng nhập số điện thoại"
         id="validationCustom03"
@@ -225,7 +194,6 @@ function AddBookList() {
        <CCollapse visible={!visible}>
       <div className="row" >
       {buyShopBook .map(book =>{
-        if(book.id !== 0) {
             return (
                 <div className="col-3"  key={book.id}>
                 <div className="card" style={{height:'350px'}}>
@@ -236,6 +204,7 @@ function AddBookList() {
                     <p className="card-text">
                       <a href={`#/book/bookdetails/${book.id}`}>{book.name}</a>
                     </p>
+                    <p>Số lượng: {book.quantity}</p>
                     <div className="row">
                       <p className="card-money col-6">
                       {book.price}
@@ -249,9 +218,9 @@ function AddBookList() {
                 
             )
         }
-      })}
+      )}
        </div>
-       <CButton onClick={() => checkValue()}>Xac nhan</CButton>
+       <CButton onClick={() => changePrice()}>Xac nhan</CButton>
        </CCollapse>
       </>
     )

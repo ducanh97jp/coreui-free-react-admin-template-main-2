@@ -54,7 +54,6 @@ const Widgets = React.lazy(() => import('./views/widgets/Widgets'))
 const BookList = React.lazy(() => import('./views/book/BookList'))
 const BookDetail = React.lazy(() => import('./views/book/BookDetail'))
 const BookShopping = React.lazy(() => import('./views/book/BookShopping'))
-const Buy = React.lazy(() => import('./views/book/Buy'))
 const AddBookList = React.lazy(() => import('./views/book/AddBookList'))
 
 const routes = [
@@ -66,7 +65,6 @@ const routes = [
   { path: '/book/booklist', name: 'BookList', element: BookList },
   { path: '/book/bookshopping', name: 'BookShopping', element: BookShopping },
   { path: '/book/bookdetails/:id', name: 'BookDetails', element: BookDetail },
-  { path: '/book/buy', name: 'buy', element: Buy },
   { path: '/book/addBookList', name: 'AddBookList', element: AddBookList },
 
   { path: '/theme/typography', name: 'Typography', element: Typography },

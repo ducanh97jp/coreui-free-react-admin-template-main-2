@@ -24,43 +24,27 @@ function BookShopping() {
     async function importShop(event) {
       console.log(event)
       debugger
-      // if (buyShopBook.length > 1) {
-      //   for (let i = 1; i < buyShopBook.length; i++) {
-      //   if(event.code === buyShopBook[i].code) {
-      //     setAddBook(buyShopBook[i])
-      //     let updateQuantity = buyShopBook[i].quantity +1
-      //     setAddBook( buy => {
-      //       return { ...buy, quantity: updateQuantity + 1}
-      //     })
-      //     // setCheckBuy(true)
-          
-      //     await buyBookAPI.update(event.id, addBook).then(async () => fetchBuyBookList())
-      //   } else {
-      //     setAddBook(event)
-      //     setAddBook( buy => {
-      //     return { ...buy, quantity:1, date:day}
-      //   })
-      //   await buyBookAPI.create(addBook).then(async () => fetchBuyBookList())
-      //   }
-      // }
-      // } else {
-        
-        // setCheckBuy(false)
-      // }
-      // if (checkBuy) {
-      //   await buyBookAPI.update(event.id, addBook).then(async () => fetchBuyBookList())
-      // } else {
-      // let today = new Date()
-      // let day = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
-      //   setAddBook( buy => {
-      //     return { ...event, quantity:1, date:day}
-      //   })
-        await buyBookAPI.create(event).then(async () => fetchBuyBookList())
+      let checkValues = false
+      let data = {}
+      let a = 0
+      for(let i = 0; i < buyShopBook.length; i ++) {
+        checkValues = buyShopBook[i].code.includes(event.code)
+          if (checkValues) {
+            a += 1
+            let newQuantity = {quantity: parseInt(buyShopBook[i].quantity) + 1}
+            data = buyShopBook[i]
+            let datas = {...data, ...newQuantity}
+            console.log(datas)
+            await buyBookAPI.update(datas.id, datas).then(async () => fetchBookList())
+          } 
       }
-    const buyBook = (event) => {
-      
-    }
-
+      if (a === 0) {
+        let newQuantity = {quantity:1}
+        data = event
+        let datas = { ...event, ...newQuantity}
+        await buyBookAPI.create(datas).then(async () => fetchBuyBookList())
+      }
+      }
     useEffect(() => {
         fetchBookList()
         fetchBuyBookList()

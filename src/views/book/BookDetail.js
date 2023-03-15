@@ -30,6 +30,10 @@ async function fetchBuyBookList() {
   const response = await buyBookAPI.getAll()
   setBuyShopBook(response.data)
 }
+let luongmua = 0
+  for(let i = 0;i<buyShopBook.length;i++) {
+    luongmua += (parseInt(buyShopBook[i].quantity))
+  }
 async function importShop(event) {
   debugger
   let checkValues = false
@@ -145,7 +149,7 @@ async function importShop(event) {
                     <i className="bi bi-cart"></i>
                   </div>
                   <div className="col-9">
-                    <a href={'#/book/addBookList'}><p>Giỏ hàng ({buyShopBook.length})</p></a>
+                    <a href={'#/book/addBookList'}><p>Giỏ hàng ({luongmua})</p></a>
                   </div>
                 </div>
               </div>
